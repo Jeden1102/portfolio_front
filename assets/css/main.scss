@@ -7,11 +7,11 @@
     font-family: Inter;
     color: #2c3e50;
   }
-  .menu-link {
-    @apply uppercase text-gray-700 md:text-lg   md:capitalize md:text-white;
-  }
   .atoms-button {
-    @apply flex items-center rounded-xl bg-primary  px-8 py-4  text-white transition-all hover:-translate-y-[1px] hover:opacity-90 hover:shadow-md;
+    @apply flex items-center rounded-xl bg-primary  px-7 py-3  text-white transition-all hover:-translate-y-[1px] hover:opacity-90 hover:shadow-md;
+    &.light {
+      @apply bg-white text-gray-700;
+    }
   }
   .atoms-input {
     @apply block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary focus:ring-primary;

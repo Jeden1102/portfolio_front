@@ -1,19 +1,19 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
-  css: ["~/assets/css/main.css"],
+  devtools: { enabled: false },
+  css: ['~/assets/css/main.scss'],
   runtimeConfig: {
     public: {
-      googleApiKey: "",
-      apiUrl: "",
+      googleApiKey: '',
+      apiUrl: '',
     },
   },
   strapi: {
-    url: process.env.NUXT_PUBLIC_API_URL || "http://localhost:1337",
+    url: process.env.NUXT_PUBLIC_API_URL || 'http://localhost:1337',
   },
   modules: [
     [
-      "@nuxtjs/google-fonts",
+      '@nuxtjs/google-fonts',
 
       {
         families: {
@@ -21,19 +21,21 @@ export default defineNuxtConfig({
         },
       },
     ],
-    "nuxt-icon",
-    "@nuxt/image",
-    "nuxt-aos",
-    "@nuxtjs/strapi",
-    "@nuxtjs/i18n",
+    'nuxt-icon',
+    '@nuxt/image',
+    'nuxt-aos',
+    '@nuxtjs/strapi',
+    '@nuxtjs/i18n',
   ],
   i18n: {
-    vueI18n: "./i18n.config.ts",
+    vueI18n: './i18n.config.ts',
   },
   postcss: {
     plugins: {
+      'postcss-import': {},
+      'tailwindcss/nesting': {},
       tailwindcss: {},
       autoprefixer: {},
     },
   },
-});
+})

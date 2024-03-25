@@ -1,11 +1,14 @@
 <template>
   <header
-    class="container-custom flex justify-between py-4 lg:items-center lg:gap-4"
+    class="container-custom flex justify-center gap-8 py-4 lg:items-center lg:gap-4"
   >
-    <div class="flex gap-2">
-      <span>Dominik Raducki</span>
+    <NuxtLink to="/" class="flex gap-2 text-xl">
+      <p class="">
+        Dominik
+        <span class="text-primary">Raducki</span>
+      </p>
       <img width="24" height="24" src="@/assets/images/logo-icon.png" alt="" />
-    </div>
+    </NuxtLink>
     <MoleculesMainNav />
     <MoleculesLanguageSwitcher />
   </header>
