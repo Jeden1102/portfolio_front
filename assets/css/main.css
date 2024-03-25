@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: Inter;
+    color: #2c3e50;
+  }
+  .menu-link {
+    @apply uppercase text-gray-700 md:text-lg   md:capitalize md:text-white;
+  }
+  .atoms-button {
+    @apply flex items-center rounded-xl bg-primary  px-8 py-4  text-white transition-all hover:-translate-y-[1px] hover:opacity-90 hover:shadow-md;
+  }
+  .atoms-input {
+    @apply block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary focus:ring-primary;
+  }
+  .container-custom {
+    @apply mx-auto max-w-full px-4 md:px-8;
+    max-width: 1320px;
+  }
+  .container-slim {
+    @apply mx-auto px-4 md:px-8;
+    max-width: 950px;
+  }
+  .mobile-only {
+    @apply block lg:hidden;
+  }
+  .desktop-only {
+    @apply hidden lg:block;
+  }
+}
