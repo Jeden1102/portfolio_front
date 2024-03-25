@@ -12,6 +12,7 @@
       & > div,
       section {
         min-height: calc(100vh - 100px);
+        padding-bottom: 60px;
       }
     }
   }

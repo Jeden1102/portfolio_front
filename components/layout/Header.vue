@@ -1,6 +1,6 @@
 <template>
   <header
-    class="container-custom flex justify-center gap-8 py-4 lg:items-center lg:gap-4"
+    class="container-custom flex justify-center gap-8 py-4 lg:items-center lg:justify-between lg:gap-4"
   >
     <NuxtLink to="/" class="flex gap-2 text-xl">
       <p class="">
