@@ -1,5 +1,5 @@
 <template>
-  <div class="relative">
+  <div class="absolute right-2 top-1/2 -translate-y-1/2 lg:right-8">
     <div class="flex items-center justify-center gap-4">
       <label v-for="lang in languages" :key="lang.value" class="cursor-pointer">
         <input

@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+  <div class="app bg-secondary">
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
@@ -7,12 +7,20 @@
 </template>
 
 <style lang="scss">
+  .page-enter-active,
+  .page-leave-active {
+    transition: all 0.4s;
+  }
+  .page-enter-from,
+  .page-leave-to {
+    opacity: 0;
+  }
   .app {
     &__view {
       & > div,
       section {
         min-height: calc(100vh - 100px);
-        padding-bottom: 60px;
+        padding-bottom: 60px !important;
       }
     }
   }

@@ -8,6 +8,9 @@ export default defineNuxtConfig({
       apiUrl: '',
     },
   },
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
+  },
   strapi: {
     url: process.env.NUXT_PUBLIC_API_URL || 'http://localhost:1337',
   },
