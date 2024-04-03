@@ -1,7 +1,7 @@
 <template>
   <div class="relative flex bg-secondary py-4 text-white">
     <div
-      class="container-custom flex flex-col items-center justify-center gap-10 md:flex-row"
+      class="container-custom flex flex-col gap-10 md:flex-row"
       data-aos="fade-up"
     >
       <div
@@ -22,7 +22,7 @@
           FrontEnd Developer
         </p>
         <p data-aos="fade-up" data-aos-delay="150">Main skills</p>
-        <div class="flex max-w-52 flex-wrap gap-2">
+        <div class="flex flex-wrap gap-2">
           <AtomsBadge>Nuxt</AtomsBadge>
           <AtomsBadge>Vue</AtomsBadge>
           <AtomsBadge>React</AtomsBadge>

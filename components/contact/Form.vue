@@ -7,22 +7,33 @@ import type { AtomsTextarea } from '#build/components';
       placeholder="name@flowbite.com"
       required
       label="Your e-mail"
+      v-model="formData.email"
     />
     <AtomsInput
       type="text"
       id="subject"
       placeholder="Just a question"
       label="Subject"
+      v-model="formData.subject"
     />
     <AtomsTextarea
       id="message"
       placeholder="Hi! I'd like to ask for..."
       label="Message"
+      v-model="formData.message"
     />
-    <AtomsButton type="submit">Send message</AtomsButton>
+    <AtomsButton custom-class="flex justify-center mt-4" type="submit"
+      >Send message</AtomsButton
+    >
   </form>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  const formData = ref({
+    email: '',
+    subject: '',
+    message: '',
+  })
+</script>
 
 <style scoped></style>

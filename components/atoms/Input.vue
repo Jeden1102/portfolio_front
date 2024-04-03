@@ -11,7 +11,8 @@
     :placeholder="placeholder ? placeholder : ''"
     :class="`atoms-input ${customClass ? customClass : ''}`"
     :required="required"
-    @keyup="() => emits('onKeyUp')"
+    @input="(event) => emits('update:modelValue', value)"
+    v-model="value"
   />
 </template>
 
@@ -25,9 +26,12 @@
     id?: string
     required?: boolean
     label?: boolean
+    modelValue: string
   }
+
+  const value = ref('')
 
   const props = defineProps<Props>()
 
-  const emits = defineEmits(['onKeyUp'])
+  const emits = defineEmits(['update:modelValue'])
 </script>

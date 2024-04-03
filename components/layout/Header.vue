@@ -5,7 +5,7 @@
     >
       <NuxtLink to="/" class="flex gap-2 text-xl">
         <p class="">
-          <span>Dominik</span>
+          <span class="text-gray-600">Dominik</span>
           <span class="text-primary">Raducki</span>
         </p>
         <img

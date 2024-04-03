@@ -11,7 +11,8 @@
     :class="`atoms-input ${customClass ? customClass : ''}`"
     :required="required"
     rows="6"
-    @keyup="() => emits('onKeyUp')"
+    v-model="value"
+    @input="() => emits('update:modelValue', value)"
   ></textarea>
 </template>
 
@@ -29,5 +30,7 @@
 
   const props = defineProps<Props>()
 
-  const emits = defineEmits(['onKeyUp'])
+  const value = ref('')
+
+  const emits = defineEmits(['update:modelValue'])
 </script>
