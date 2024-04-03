@@ -22,13 +22,14 @@
           FrontEnd Developer
         </p>
         <p data-aos="fade-up" data-aos-delay="150">Main skills</p>
-        <p
-          data-aos="fade-up"
-          data-aos-delay="200"
-          class="md:text-md text-sm font-light"
-        >
-          Nuxt/Vue/React/TS/PHP/Drupal
-        </p>
+        <div class="flex max-w-52 flex-wrap gap-2">
+          <AtomsBadge>Nuxt</AtomsBadge>
+          <AtomsBadge>Vue</AtomsBadge>
+          <AtomsBadge>React</AtomsBadge>
+          <AtomsBadge>TS</AtomsBadge>
+          <AtomsBadge>PHP</AtomsBadge>
+          <AtomsBadge>Drupal</AtomsBadge>
+        </div>
         <NuxtLink
           data-aos="fade-up"
           data-aos-delay="200"
@@ -40,7 +41,7 @@
       <div data-aos="fade-up" data-aos-delay="200">
         <client-only>
           <Vue3Lottie
-            animationLink="animation.json"
+            animationLink="hero-animation.json"
             :height="300"
             :width="300"
           />

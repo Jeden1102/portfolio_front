@@ -1,13 +1,9 @@
 <template>
   <div class="container-custom my-4 text-gray-200">
-    <div
-      class="mb-4 rounded-md bg-gray-500"
-      data-aos="fade-up"
-      data-aos-delay="100"
-    >
+    <div class="mb-4 rounded-md" data-aos="fade-up" data-aos-delay="100">
       <client-only>
         <Vue3Lottie
-          animationLink="animation2.json"
+          animationLink="about-animation.json"
           :height="200"
           :width="200"
         />
