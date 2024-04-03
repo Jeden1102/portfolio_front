@@ -22,27 +22,3 @@
 </template>
 
 <script setup lang="ts"></script>
-
-<style lang="scss">
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-
-  @layer base {
-    .menu-link {
-      @apply flex min-h-14 flex-1 flex-col items-center justify-center py-2  text-xs text-gray-700 lg:min-h-0 lg:flex-auto lg:text-sm;
-      span {
-        @apply h-0 opacity-0 transition-all lg:h-4 lg:opacity-100;
-      }
-      svg {
-        @apply lg:hidden;
-      }
-      &.router-link-active {
-        @apply bg-gray-400 bg-opacity-25 lg:bg-transparent;
-        span {
-          @apply h-4 opacity-100;
-        }
-      }
-    }
-  }
-</style>

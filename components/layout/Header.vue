@@ -1,7 +1,7 @@
 <template>
   <header class="bg-white">
     <div
-      class="container-custom relative flex justify-center gap-8 bg-white py-4 lg:items-center lg:justify-between lg:gap-4"
+      class="container-custom relative flex justify-center gap-8 bg-white py-2 md:py-4 lg:items-center lg:justify-between lg:gap-4"
     >
       <NuxtLink to="/" class="flex gap-2 text-xl">
         <p class="">

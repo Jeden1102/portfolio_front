@@ -5,14 +5,14 @@
     class="block text-sm font-medium text-gray-300"
     >{{ label }}</label
   >
-  <input
-    :type="type"
+  <textarea
     :id="id"
     :placeholder="placeholder ? placeholder : ''"
     :class="`atoms-input ${customClass ? customClass : ''}`"
     :required="required"
+    rows="6"
     @keyup="() => emits('onKeyUp')"
-  />
+  ></textarea>
 </template>
 
 <script lang="ts" setup>

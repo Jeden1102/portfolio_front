@@ -42,8 +42,8 @@
         <client-only>
           <Vue3Lottie
             animationLink="hero-animation.json"
-            :height="300"
-            :width="300"
+            :height="280"
+            :width="280"
           />
         </client-only>
         <div class="mt-4 flex w-full gap-4 lg:mt-10">
