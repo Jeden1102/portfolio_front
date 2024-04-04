@@ -4,7 +4,7 @@
       Have any questions? Want to contact me? Feel free to use the contact form
       below.
     </p>
-    <p class="text-center">-OR-</p>
+    <p class="text-center md:hidden">-OR-</p>
     <NuxtLink
       href="#contact-options"
       class="block animate-bounce text-center font-bold md:hidden"

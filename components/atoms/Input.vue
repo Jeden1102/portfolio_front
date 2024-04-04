@@ -25,7 +25,7 @@
     type?: string
     id?: string
     required?: boolean
-    label?: boolean
+    label?: string
     modelValue: string
   }
 

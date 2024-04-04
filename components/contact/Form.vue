@@ -1,6 +1,5 @@
-import type { AtomsTextarea } from '#build/components';
 <template>
-  <form action="#" class="flex flex-col gap-2">
+  <form action="#" class="flex w-full max-w-screen-sm flex-col gap-2">
     <AtomsInput
       type="email"
       id="email"

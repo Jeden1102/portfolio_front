@@ -1,12 +1,20 @@
 <template>
-  <section class="">
-    <div class="mx-auto max-w-screen-md px-4 py-8 lg:py-16">
+  <div
+    class="container-custom mx-auto flex flex-col items-center px-4 py-8 md:flex-row md:gap-8 lg:gap-20 lg:py-16"
+  >
+    <div>
       <ContactHeader />
-      <ContactForm />
+      <div class="hidden md:block">
+        <ContactDirect />
+        <ContactSocials />
+      </div>
+    </div>
+    <ContactForm />
+    <div class="block md:hidden">
       <ContactDirect />
       <ContactSocials />
     </div>
-  </section>
+  </div>
 </template>
 
 <script setup lang="ts"></script>
