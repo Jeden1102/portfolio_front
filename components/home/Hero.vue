@@ -1,7 +1,7 @@
 <template>
   <div class="relative flex bg-secondary py-4 text-white">
     <div
-      class="container-custom flex flex-col gap-10 md:flex-row"
+      class="container-custom flex flex-col items-center justify-center gap-10 md:flex-row"
       data-aos="fade-up"
     >
       <div
