@@ -15,7 +15,9 @@
           />
         </client-only>
         <p>Oh no... it looks your are lost.</p>
-        <NuxtLink class="atoms-button my-4" to="/">Take me home</NuxtLink>
+        <button @click="handleError" class="atoms-button my-4" to="/">
+          Take me home
+        </button>
       </div>
     </NuxtLayout>
   </div>
@@ -26,4 +28,6 @@
   const props = defineProps({
     error: Object as () => NuxtError,
   })
+
+  const handleError = () => clearError({ redirect: '/' })
 </script>

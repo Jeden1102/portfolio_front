@@ -1,7 +1,7 @@
 <template>
   <div class="relative flex bg-secondary py-4 text-white">
     <div
-      class="container-custom flex flex-col items-center justify-center gap-10 md:flex-row"
+      class="container-custom flex flex-col items-center justify-center gap-10 md:flex-row lg:gap-52"
       data-aos="fade-up"
     >
       <div
@@ -34,9 +34,11 @@
           data-aos="fade-up"
           data-aos-delay="200"
           to="/about"
-          class="mt-4 flex items-center gap-1 text-primary"
-          >More about me <Icon name="solar:alt-arrow-right-outline"
-        /></NuxtLink>
+          class="mt-4"
+          ><AtomsBadge type="red" variant="big"
+            >More about me <Icon name="solar:alt-arrow-right-outline"
+          /></AtomsBadge>
+        </NuxtLink>
       </div>
       <div data-aos="fade-up" data-aos-delay="200">
         <client-only>

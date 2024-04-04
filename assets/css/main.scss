@@ -9,7 +9,7 @@
     scroll-behavior: smooth;
   }
   .atoms-button {
-    @apply flex items-center rounded-xl bg-primary  px-7 py-3 hover:hidden  text-white transition-all hover:-translate-y-[1px] hover:opacity-90 hover:shadow-md;
+    @apply flex items-center rounded-xl bg-primary cursor-pointer  px-7 py-3 hover:hidden  text-white transition-all hover:-translate-y-[1px] hover:opacity-90 hover:shadow-md;
     &.light {
       @apply bg-white text-gray-700;
     }

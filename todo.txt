@@ -1,0 +1,5 @@
+3. contact forms
+4. contact form validation + fake send - console.log
+----
+5. foooter 
+6. skills page start
