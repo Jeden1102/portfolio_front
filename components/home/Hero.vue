@@ -1,7 +1,7 @@
 <template>
   <div class="relative flex bg-secondary py-4 text-white">
     <div
-      class="container-custom mobile-screen flex flex-col items-center justify-center gap-10 md:flex-row lg:gap-52"
+      class="container-custom flex flex-col items-center justify-center gap-10 md:flex-row lg:gap-52"
       data-aos="fade-up"
     >
       <div
@@ -40,14 +40,12 @@
           /></AtomsBadge>
         </NuxtLink>
       </div>
-      <div data-aos="fade-up" data-aos-delay="200">
-        <client-only>
-          <Vue3Lottie
-            animationLink="hero-animation.json"
-            :height="260"
-            :width="260"
-          />
-        </client-only>
+      <div class="w-full md:w-auto" data-aos="fade-up" data-aos-delay="200">
+        <div class="h-52 md:h-96">
+          <client-only>
+            <Vue3Lottie animationLink="hero-animation.json" height="100%" />
+          </client-only>
+        </div>
         <div class="mt-4 flex w-full gap-4 lg:mt-10">
           <NuxtLink
             class="atoms-button flex w-full justify-center text-center"
