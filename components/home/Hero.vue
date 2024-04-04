@@ -1,7 +1,7 @@
 <template>
   <div class="relative flex bg-secondary py-4 text-white">
     <div
-      class="container-custom flex flex-col items-center justify-center gap-10 md:flex-row lg:gap-52"
+      class="container-custom mobile-screen flex flex-col items-center justify-center gap-10 md:flex-row lg:gap-52"
       data-aos="fade-up"
     >
       <div
@@ -44,8 +44,8 @@
         <client-only>
           <Vue3Lottie
             animationLink="hero-animation.json"
-            :height="280"
-            :width="280"
+            :height="260"
+            :width="260"
           />
         </client-only>
         <div class="mt-4 flex w-full gap-4 lg:mt-10">

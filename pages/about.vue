@@ -29,7 +29,7 @@
         />
       </client-only>
       <NuxtLink
-        class="atoms-button mx-auto mb-4 mt-8 flex w-fit justify-center text-center"
+        class="atoms-button mx-auto mb-4 mt-4 flex w-fit justify-center text-center"
         to="/skills"
       >
         Skills&Projects
@@ -41,7 +41,7 @@
         My journey <Icon name="solar:alt-arrow-down-outline" />
       </NuxtLink>
     </div>
-    <div id="journey">
+    <div id="journey" class="py-4">
       <p data-aos="fade-up" data-aos-delay="200">
         Let me introduce myself to make you know me better. On the timeline
         below there are the most important moments of my career.

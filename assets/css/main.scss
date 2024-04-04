@@ -8,6 +8,10 @@
     color: #2c3e50;
     scroll-behavior: smooth;
   }
+  .mobile-screen{
+    max-height: calc(100dvh - 140px);
+    @apply md:max-h-full;
+  }
   .atoms-button {
     @apply flex items-center rounded-xl bg-primary cursor-pointer  px-7 py-3 hover:hidden  text-white transition-all hover:-translate-y-[1px] hover:opacity-90 hover:shadow-md;
     &.light {
