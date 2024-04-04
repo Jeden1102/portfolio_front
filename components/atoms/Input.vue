@@ -2,18 +2,20 @@
   <label
     v-if="label"
     :for="id"
-    class="block text-sm font-medium text-gray-300"
+    class="my-2 block text-sm font-medium text-gray-300"
     >{{ label }}</label
   >
   <input
     :type="type"
     :id="id"
     :placeholder="placeholder ? placeholder : ''"
-    :class="`atoms-input ${customClass ? customClass : ''}`"
+    :class="`atoms-input ${customClass ? customClass : ''} ${errorMsg ? 'border border-red-300 bg-red-50' : ''}`"
     :required="required"
-    @input="(event) => emits('update:modelValue', value)"
+    @input="() => emits('update:modelValue', value)"
+    @change="() => emits('onValueChange')"
     v-model="value"
   />
+  <span v-if="errorMsg" class="mt-1 text-sm text-red-300">{{ errorMsg }}</span>
 </template>
 
 <script lang="ts" setup>
@@ -27,11 +29,12 @@
     required?: boolean
     label?: string
     modelValue: string
+    errorMsg?: string | string | Ref<string>
   }
 
   const value = ref('')
 
   const props = defineProps<Props>()
 
-  const emits = defineEmits(['update:modelValue'])
+  const emits = defineEmits(['update:modelValue', 'onValueChange'])
 </script>
