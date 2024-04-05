@@ -10,7 +10,7 @@
       </div>
     </div>
     <ContactForm />
-    <div class="block md:hidden">
+    <div class="block md:hidden w-full">
       <ContactDirect />
       <ContactSocials />
     </div>
