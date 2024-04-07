@@ -43,7 +43,7 @@
     @apply relative flex min-h-14 flex-1 flex-col items-center justify-center px-2 py-2 text-xs text-gray-700 lg:min-h-0 lg:flex-auto lg:text-sm;
 
     &__text {
-      @apply relative z-10 h-0 opacity-0 transition-all group-hover:text-white lg:h-4 lg:opacity-100;
+      @apply relative z-10 h-0 opacity-0 transition-all lg:group-hover:text-white lg:h-4 lg:opacity-100;
     }
 
     svg {
