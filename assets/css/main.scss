@@ -10,41 +10,56 @@
   }
 
   .atoms-button {
-    @apply flex items-center rounded-xl bg-primary cursor-pointer  px-7 py-3 hover:hidden  text-white transition-all hover:-translate-y-[1px] hover:opacity-90 hover:shadow-md;
+    @apply flex cursor-pointer items-center rounded-xl bg-primary px-7 py-3 text-white transition-all hover:hidden hover:-translate-y-[1px] hover:opacity-90 hover:shadow-md;
+
     &.light {
       @apply bg-white text-gray-700;
     }
   }
+
   .atoms-input {
     @apply block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary focus:ring-primary;
   }
+
   .container-custom {
-    @apply w-full mx-auto max-w-full px-4 md:px-8;
+    @apply mx-auto w-full max-w-full px-4 md:px-8;
     max-width: 1320px;
   }
+
   .container-slim {
     @apply mx-auto px-4 md:px-8;
     max-width: 950px;
   }
+
   .mobile-only {
     @apply block lg:hidden;
   }
+
   .desktop-only {
     @apply hidden lg:block;
   }
+
   .menu-link {
-    @apply flex min-h-14 flex-1 flex-col items-center justify-center py-2  text-xs text-gray-700 lg:min-h-0 lg:flex-auto lg:text-sm;
-    span {
-      @apply h-0 opacity-0 transition-all lg:h-4 lg:opacity-100;
+    @apply relative flex min-h-14 flex-1 flex-col items-center justify-center px-2 py-2 text-xs text-gray-700 lg:min-h-0 lg:flex-auto lg:text-sm;
+
+    &__text {
+      @apply relative z-10 h-0 opacity-0 transition-all group-hover:text-white lg:h-4 lg:opacity-100;
     }
+
     svg {
       @apply lg:hidden;
     }
+
     &.router-link-active {
       @apply bg-gray-400 bg-opacity-25 lg:bg-transparent;
-      span {
+
+      .menu-link__text {
         @apply h-4 opacity-100;
       }
     }
+  }
+
+  .menu-link-hover {
+    @apply pointer-events-none absolute -bottom-0.5 left-0 z-0 hidden h-0 w-full bg-primary transition-all group-hover:h-full lg:block;
   }
 }
