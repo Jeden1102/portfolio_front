@@ -1,5 +1,5 @@
 <template>
-  <div class="relative flex bg-secondary py-4 text-white">
+  <div class="relative flex h-full bg-secondary py-4 text-white">
     <div
       class="container-custom flex flex-col items-center justify-center gap-10 md:flex-row lg:gap-52"
       data-aos="fade-up"
@@ -35,7 +35,7 @@
           data-aos-delay="200"
           to="/about"
           class="mt-4"
-          ><AtomsBadge type="red" variant="big"
+          ><AtomsBadge type="red" variant="medium"
             >More about me <Icon name="solar:alt-arrow-right-outline"
           /></AtomsBadge>
         </NuxtLink>

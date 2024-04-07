@@ -53,6 +53,10 @@
     &.router-link-active {
       @apply bg-gray-400 bg-opacity-25 lg:bg-transparent;
 
+      .menu-link-hover {
+        @apply h-0.5;
+      }
+
       .menu-link__text {
         @apply h-4 opacity-100;
       }
@@ -61,5 +65,22 @@
 
   .menu-link-hover {
     @apply pointer-events-none absolute -bottom-0.5 left-0 z-0 hidden h-0 w-full bg-primary transition-all group-hover:h-full lg:block;
+  }
+
+  .footer-links {
+    a {
+      &.router-link-active {
+        @apply text-gray-300;
+      }
+    }
+  }
+
+  .skills {
+    a {
+      @apply opacity-80;
+      &.router-link-active {
+        @apply opacity-100;
+      }
+    }
   }
 }

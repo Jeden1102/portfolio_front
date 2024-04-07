@@ -1,7 +1,7 @@
 <template>
   <div
     class="rounded text-gray-800"
-    :class="[variantClasses[type], typeClasses[variant]]"
+    :class="[variantClasses[type], typeClasses[variant], customClass]"
   >
     <slot></slot>
   </div>
@@ -13,6 +13,7 @@
   interface Props {
     type?: badgeType
     variant?: badgeVariant
+    customClass?: string
   }
 
   const variantClasses = {

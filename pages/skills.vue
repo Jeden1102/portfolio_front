@@ -1,5 +1,5 @@
 <template>
-  <div class="container-custom flex flex-col gap-8 py-4">
+  <div class="container-custom skills flex flex-col gap-8 py-4">
     <div class="flex gap-2">
       <NuxtLink to="/skills/list"
         ><AtomsBadge variant="big">Display in list</AtomsBadge></NuxtLink
