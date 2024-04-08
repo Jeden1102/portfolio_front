@@ -63,4 +63,15 @@
 
 <script setup lang="ts">
   import { Vue3Lottie } from 'vue3-lottie'
+
+  const client = useSupabaseClient()
+
+  const { data: main_page } = await useAsyncData('main_page', async () => {
+    const { data } = await client
+      .from('main_page')
+      .select('heading, heading_en')
+      .single()
+
+    return data
+  })
 </script>

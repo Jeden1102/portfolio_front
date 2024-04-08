@@ -4,8 +4,8 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.scss'],
   runtimeConfig: {
     public: {
-      googleApiKey: '',
-      apiUrl: '',
+      SUPABASE_URL: '',
+      SUPABASE_KEY: '',
     },
   },
   app: {
@@ -29,7 +29,12 @@ export default defineNuxtConfig({
     'nuxt-aos',
     '@nuxtjs/strapi',
     '@nuxtjs/i18n',
+    '@nuxtjs/supabase',
+    '@nuxtjs/apollo',
   ],
+  supabase: {
+    redirect: false,
+  },
   i18n: {
     vueI18n: './i18n.config.ts',
   },
