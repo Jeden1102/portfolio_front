@@ -22,14 +22,7 @@
           FrontEnd Developer
         </p>
         <p data-aos="fade-up" data-aos-delay="150">Main skills</p>
-        <div class="flex flex-wrap gap-2">
-          <AtomsBadge>Nuxt</AtomsBadge>
-          <AtomsBadge>Vue</AtomsBadge>
-          <AtomsBadge>React</AtomsBadge>
-          <AtomsBadge>TS</AtomsBadge>
-          <AtomsBadge>PHP</AtomsBadge>
-          <AtomsBadge>Drupal</AtomsBadge>
-        </div>
+        <HomeMainSkills />
         <NuxtLink
           data-aos="fade-up"
           data-aos-delay="200"
