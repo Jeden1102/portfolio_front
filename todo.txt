@@ -1,3 +1,11 @@
-----
-5. foooter 
-6. skills page start
+1. hero section code refactor
+2. translations
+3. db connection - home
+---
+4. db conntecton - about - new content type for timeline
+--
+5. db connection - contact
+--
+6. db connection - skills/projects
+--
+7. CoreWebVitals improvements.
