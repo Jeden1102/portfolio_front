@@ -1,28 +1,94 @@
 export default defineI18nConfig(() => ({
   legacy: false,
-  locale: "en",
+  locale: 'en',
   messages: {
     en: {
-      home: "Home",
-      explore: "Explore",
-      our_offer: "Our offer",
-      destination_map: "Destination map",
-      search: "Search...",
-      sign_up: "Sign up",
-      log_in: "Log in",
-      go_back: "Go back",
-      menu: {
-        explore: "Explore best destinations we offer.",
-        offer: "Checkout our offer.",
-      },
-      pages: {
-        home: {
-          heading: "Your world of joy",
-          subHeading:
-            "From local escapes to far-flung adventures, find what makes you happy anytime, anywhere",
+      contact: {
+        form: {
+          labels: {
+            email: 'Your e-mail',
+            subject: 'Subject (optional)',
+            message: 'Message',
+          },
+          placeholders: {
+            subject: 'Just a question',
+            message: "Hi! I'd like to ask for...",
+          },
+          send: 'Send message',
+          validations: {
+            emailRequired: 'The email field is required',
+            invalidEmail: 'Invalid email format',
+            maxLength: 'Max lenght is {length}',
+            fieldRequired: 'The {field} field is required',
+          },
         },
       },
+      home: {
+        hero: {
+          mainSkills: 'Main Skills',
+          more: 'More about me',
+          skills: 'Skills',
+          contact: 'Contact',
+        },
+      },
+      about: {
+        softSkills: 'Soft skills',
+        myJourney: 'My journey',
+        title:
+          'Let me introduce myself to make you know me better. On the timeline below there are the most important moments of my career.',
+      },
+      skills: {
+        list: 'Display in list',
+        fancy: 'Display in fancy style',
+      },
+      homePage: 'Home',
+      aboutPage: 'About me',
+      skillsPage: 'Skills&Projects',
+      contactPage: 'Contact',
     },
-    pl: {},
+    pl: {
+      contact: {
+        form: {
+          labels: {
+            email: 'Twój adres e-mail',
+            subject: 'Temat (opcjonalnie)',
+            message: 'Wiadomość',
+          },
+          placeholders: {
+            subject: 'Tylko pytanie',
+            message: 'Cześć! Chciałbym zapytać o...',
+          },
+          send: 'Wyślij wiadomość',
+          validations: {
+            emailRequired: 'Pole e-mail jest wymagane',
+            invalidEmail: 'Nieprawidłowy format e-maila',
+            maxLength: 'Maksymalna długość to {length}',
+            fieldRequired: 'Pole {field} jest wymagane',
+          },
+        },
+      },
+      home: {
+        hero: {
+          mainSkills: 'Główne umiejętności',
+          more: 'Więcej o mnie',
+          skills: 'Umiejętności',
+          contact: 'Kontakt',
+        },
+      },
+      about: {
+        softSkills: 'Umiejętności miękkie',
+        myJourney: 'Moja podróż',
+        title:
+          'Pozwól mi się przedstawić, abyś mógł/mogła mnie lepiej poznać. Na poniższym osi czasu znajdują się najważniejsze momenty mojej kariery.',
+      },
+      skills: {
+        list: 'Wyświetl w formie listy',
+        fancy: 'Wyświetl w stylu fancy',
+      },
+      homePage: 'Strona główna',
+      aboutPage: 'O mnie',
+      skillsPage: 'Umiejętności i Projekty',
+      contactPage: 'Kontakt',
+    },
   },
-}));
+}))

@@ -7,7 +7,7 @@
       type="text"
       id="email"
       placeholder="name@flowbite.com"
-      label="Your e-mail"
+      :label="$t('contact.form.labels.email')"
       v-model="formData.email"
       :error-msg="v$.email.$errors[0]?.$message"
       @on-value-change="v$.email.$touch"
@@ -15,27 +15,28 @@
     <AtomsInput
       type="text"
       id="subject"
-      placeholder="Just a question"
-      label="Subject (optional)"
+      :placeholder="$t('contact.form.placeholders.subject')"
+      :label="$t('contact.form.labels.subject')"
       v-model="formData.subject"
       :error-msg="v$.subject.$errors[0]?.$message"
       @on-value-change="v$.subject.$touch"
     />
     <AtomsTextarea
       id="message"
-      placeholder="Hi! I'd like to ask for..."
+      :placeholder="$t('contact.form.placeholders.message')"
       label="Message"
       :error-msg="v$.message.$errors[0]?.$message"
       v-model="formData.message"
       @on-value-change="v$.message.$touch"
     />
-    <AtomsButton custom-class="flex justify-center mt-4" type="submit"
-      >Send message</AtomsButton
-    >
+    <AtomsButton custom-class="flex justify-center mt-4" type="submit">{{
+      $t('contact.form.send')
+    }}</AtomsButton>
   </form>
 </template>
 
 <script setup lang="ts">
+  const { t } = useI18n()
   const formData = ref({
     email: '',
     subject: '',
@@ -47,18 +48,30 @@
   const rules = computed(() => {
     return {
       email: {
-        required: helpers.withMessage('The email field is required', required),
-        email: helpers.withMessage('Invalid email format', email),
+        required: helpers.withMessage(
+          t('contact.form.validations.emailRequired'),
+          required,
+        ),
+        email: helpers.withMessage(
+          t('contact.form.validations.invalidEmail'),
+          email,
+        ),
       },
       subject: {
-        maxLength: helpers.withMessage('Max length is 128', maxLength(128)),
+        maxLength: helpers.withMessage(
+          t('contact.form.validations.maxLength', { length: 128 }),
+          maxLength(128),
+        ),
       },
       message: {
         required: helpers.withMessage(
-          'The message field is required',
+          t('contact.form.validations.fieldRequired', { field: 'message' }),
           required,
         ),
-        maxLength: helpers.withMessage('Max length is 2048', maxLength(2048)),
+        maxLength: helpers.withMessage(
+          t('contact.form.validations.maxLength', { length: 2048 }),
+          maxLength(2048),
+        ),
       },
     }
   })

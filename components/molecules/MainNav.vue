@@ -4,23 +4,23 @@
   >
     <NuxtLink class="menu-link group" to="/">
       <Icon name="solar:home-angle-linear" class="text-xl lg:hidden" />
-      <span class="menu-link__text">Home</span>
+      <span class="menu-link__text">{{ $t('homePage') }}</span>
       <span class="menu-link-hover"></span>
     </NuxtLink>
 
     <NuxtLink class="menu-link group" to="/about">
       <Icon name="solar:info-square-linear" class="text-xl lg:hidden" />
-      <span class="menu-link__text">About me</span>
+      <span class="menu-link__text">{{ $t('aboutPage') }}</span>
       <span class="menu-link-hover"></span>
     </NuxtLink>
     <NuxtLink class="menu-link group" to="/skills/list">
       <Icon name="solar:clapperboard-edit-broken" class="text-xl lg:hidden" />
-      <span class="menu-link__text">Skills&Projects</span>
+      <span class="menu-link__text">{{ $t('skillsPage') }}</span>
       <span class="menu-link-hover"></span>
     </NuxtLink>
     <NuxtLink class="menu-link group" to="/contact">
       <Icon name="solar:chat-square-call-linear" class="text-xl lg:hidden" />
-      <span class="menu-link__text">Contact</span>
+      <span class="menu-link__text">{{ $t('contactPage') }}</span>
       <span class="menu-link-hover"></span>
     </NuxtLink>
   </nav>

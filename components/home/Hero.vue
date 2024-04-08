@@ -21,7 +21,9 @@
         >
           FrontEnd Developer
         </p>
-        <p data-aos="fade-up" data-aos-delay="150">Main skills</p>
+        <p data-aos="fade-up" data-aos-delay="150">
+          {{ $t('home.hero.mainSkills') }}
+        </p>
         <HomeMainSkills />
         <NuxtLink
           data-aos="fade-up"
@@ -29,7 +31,8 @@
           to="/about"
           class="mt-4"
           ><AtomsBadge type="red" variant="medium"
-            >More about me <Icon name="solar:alt-arrow-right-outline"
+            >{{ $t('home.hero.more') }}
+            <Icon name="solar:alt-arrow-right-outline"
           /></AtomsBadge>
         </NuxtLink>
       </div>
@@ -44,13 +47,13 @@
             class="atoms-button flex w-full justify-center text-center"
             to="/skills"
           >
-            Skills
+            {{ $t('home.hero.skills') }}
           </NuxtLink>
           <NuxtLink
             class="atoms-button light flex w-full justify-center text-center"
             to="/skills"
           >
-            Contact
+            {{ $t('home.hero.contact') }}
           </NuxtLink>
         </div>
       </div>

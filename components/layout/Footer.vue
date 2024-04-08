@@ -3,14 +3,10 @@
     class="hidden bg-gray-900 py-4 text-sm font-light text-gray-400 lg:block"
   >
     <div class="container-custom footer-links flex gap-4">
-      <NuxtLink to="/"> Home </NuxtLink>
-      <NuxtLink to="/about"> About me </NuxtLink>
-      <NuxtLink to="/skills/list"> Skills&Projects </NuxtLink>
-      <NuxtLink to="/contact"> Contact </NuxtLink>
+      <NuxtLink to="/"> {{ $t('homePage') }} </NuxtLink>
+      <NuxtLink to="/about"> {{ $t('aboutPage') }} </NuxtLink>
+      <NuxtLink to="/skills/list"> {{ $t('skillsPage') }} </NuxtLink>
+      <NuxtLink to="/contact"> {{ $t('contactPage') }} </NuxtLink>
     </div>
   </footer>
 </template>
-
-<script setup lang="ts"></script>
-
-<style scoped></style>

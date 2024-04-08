@@ -12,7 +12,7 @@
           width="24"
           height="24"
           src="@/assets/images/logo-icon.png"
-          alt=""
+          alt="Page logo"
         />
       </NuxtLink>
       <MoleculesMainNav />

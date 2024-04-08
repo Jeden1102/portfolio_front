@@ -12,7 +12,7 @@
         <b>2 years of commercial experience.</b>
       </p>
 
-      <h1 class="text-lg">Soft skills</h1>
+      <h1 class="text-lg">{{ $t('about.softSkills') }}</h1>
       <div class="flex flex-wrap gap-2">
         <AtomsBadge>Nuxt</AtomsBadge>
         <AtomsBadge>Vue</AtomsBadge>
@@ -32,25 +32,20 @@
         class="atoms-button mx-auto mb-4 mt-4 flex w-fit justify-center text-center"
         to="/skills"
       >
-        Skills&Projects
+        {{ $t('skillsPage') }}
       </NuxtLink>
       <NuxtLink
         href="#journey"
         class="animate-bounce text-center font-bold md:hidden"
       >
-        My journey <Icon name="solar:alt-arrow-down-outline" />
+        {{ $t('about.myJourney') }} <Icon name="solar:alt-arrow-down-outline" />
       </NuxtLink>
     </div>
     <div id="journey" class="py-4">
       <p data-aos="fade-up" data-aos-delay="200">
-        Let me introduce myself to make you know me better. On the timeline
-        below there are the most important moments of my career.
+        {{ $t('about.title') }}
       </p>
       <MoleculesTimeline />
     </div>
   </div>
 </template>
-
-<script setup lang="ts"></script>
-
-<style scoped></style>
