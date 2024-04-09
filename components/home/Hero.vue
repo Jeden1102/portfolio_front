@@ -66,12 +66,16 @@
 
   const client = useSupabaseClient()
 
-  const { data: main_page } = await useAsyncData('main_page', async () => {
-    const { data } = await client
-      .from('main_page')
-      .select('heading, heading_en')
-      .single()
+  if(client){
+    console.log(client);
+    const { data: main_page } = await useAsyncData('main_page', async () => {
+      const { data } = await client
+        .from('main_page')
+        .select('heading, heading_en')
+        .single()
 
-    return data
-  })
+      return data
+    })
+  }
+
 </script>
