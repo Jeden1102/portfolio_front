@@ -68,7 +68,7 @@
 <script setup lang="ts">
   import { Vue3Lottie } from 'vue3-lottie'
 
-  import type { HomeHero } from '../../types/home.ts'
+  import type { HomeHero } from '../../types/home'
 
   const { locale } = useI18n()
 

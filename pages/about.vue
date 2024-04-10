@@ -7,20 +7,17 @@
       data-aos="fade-up"
       data-aos-delay="100"
     >
-      <p class="text-lg lg:text-2xl" data-aos="fade-up" data-aos-delay="150">
-        Hi! I'm Dominik Raducki - FrontEnd developer with more than
-        <b>2 years of commercial experience.</b>
-      </p>
+      <p
+        class="text-lg lg:text-2xl"
+        data-aos="fade-up"
+        data-aos-delay="150"
+        v-html="
+          locale === 'en' ? headingData?.heading_en : headingData?.heading
+        "
+      ></p>
 
       <h1 class="text-lg">{{ $t('about.softSkills') }}</h1>
-      <div class="flex flex-wrap gap-2">
-        <AtomsBadge>Nuxt</AtomsBadge>
-        <AtomsBadge>Vue</AtomsBadge>
-        <AtomsBadge>React</AtomsBadge>
-        <AtomsBadge>TS</AtomsBadge>
-        <AtomsBadge>PHP</AtomsBadge>
-        <AtomsBadge>Drupal</AtomsBadge>
-      </div>
+      <AboutSoftSkills />
       <client-only>
         <Vue3Lottie
           animationLink="about-animation.json"
@@ -45,7 +42,32 @@
       <p data-aos="fade-up" data-aos-delay="200">
         {{ $t('about.title') }}
       </p>
-      <MoleculesTimeline />
+      <AboutTimeline />
     </div>
   </div>
 </template>
+<script setup lang="ts">
+  import { Vue3Lottie } from 'vue3-lottie'
+
+  import type { HomeHero } from '../types/home.ts'
+
+  const { locale } = useI18n()
+
+  const headingData = ref<HomeHero | null>(null)
+
+  const client = useSupabaseClient()
+
+  const getData = async () => {
+    const { data, error } = await client.from('about_page').select('*').single()
+
+    if (error) {
+      console.log(error)
+      return
+    }
+    headingData.value = data
+  }
+
+  onMounted(async () => {
+    getData()
+  })
+</script>
