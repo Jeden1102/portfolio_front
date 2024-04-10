@@ -11,16 +11,20 @@
         <h1
           data-aos="fade-up"
           class="text-3xl font-bold md:text-4xl lg:text-7xl"
-        >
-          Hello! <span class="font-light">I'm Dominik</span>
-        </h1>
+          v-html="
+            locale === 'en' ? headingData?.heading_en : headingData?.heading
+          "
+        ></h1>
         <p
           data-aos="fade-up"
           data-aos-delay="100"
           class="mb-4 text-sm font-light md:text-lg"
-        >
-          FrontEnd Developer
-        </p>
+          v-html="
+            locale === 'en'
+              ? headingData?.description_en
+              : headingData?.description
+          "
+        ></p>
         <p data-aos="fade-up" data-aos-delay="150">
           {{ $t('home.hero.mainSkills') }}
         </p>
@@ -64,18 +68,25 @@
 <script setup lang="ts">
   import { Vue3Lottie } from 'vue3-lottie'
 
+  import type { HomeHero } from '../../types/home.ts'
+
+  const { locale } = useI18n()
+
+  const headingData = ref<HomeHero | null>(null)
+
   const client = useSupabaseClient()
 
-  if(client){
-    console.log(client);
-    const { data: main_page } = await useAsyncData('main_page', async () => {
-      const { data } = await client
-        .from('main_page')
-        .select('heading, heading_en')
-        .single()
+  const getData = async () => {
+    const { data, error } = await client.from('main_page').select('*').single()
 
-      return data
-    })
+    if (error) {
+      console.log(error)
+      return
+    }
+    headingData.value = data
   }
 
+  onMounted(async () => {
+    getData()
+  })
 </script>
