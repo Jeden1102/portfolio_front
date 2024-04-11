@@ -14,9 +14,9 @@
       <h3 class="mb-1 flex items-center text-lg font-semibold text-gray-100">
         {{ t.title }}
       </h3>
-      <time class="mb-2 block text-sm font-normal leading-none text-gray-200"
-        >Released on {{ t.date }}</time
-      >
+      <time class="mb-2 block text-sm font-normal leading-none text-gray-200">{{
+        t.date
+      }}</time>
       <p
         class="mb-4 text-base font-normal text-gray-300"
         v-html="locale === 'en' ? t.description_en : t.description"
@@ -35,7 +35,10 @@
   const client = useSupabaseClient()
 
   const getData = async () => {
-    const { data, error } = await client.from('timeline').select('*')
+    const { data, error } = await client
+      .from('timeline')
+      .select('*')
+      .order('date', { ascending: false })
 
     if (error) {
       console.log(error)

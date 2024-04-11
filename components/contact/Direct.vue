@@ -3,18 +3,22 @@
     <NuxtLink href="tel:+48516525133">
       <AtomsBadge variant="big">
         <Icon class="mr-2 text-xl" name="solar:phone-linear" />
-        <span>(+48) 516 525 133</span>
+        <span>{{ props.contact.phone }}</span>
       </AtomsBadge>
     </NuxtLink>
     <NuxtLink href="mailto:+48516525133">
       <AtomsBadge variant="big">
         <Icon class="mr-2 text-xl" name="solar:map-arrow-right-linear" />
-        <span>dominik.raducki@onet.pl</span>
+        <span>{{ props.contact.email }}</span>
       </AtomsBadge>
     </NuxtLink>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  import type { ContactLinks } from '../../types/contact'
 
-<style scoped></style>
+  const props = defineProps<{
+    contact: ContactLinks
+  }>()
+</script>

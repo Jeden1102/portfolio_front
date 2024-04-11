@@ -1,6 +1,7 @@
 <template>
   <form
     @submit.prevent="handleFormSubmit"
+    ref="form"
     class="flex w-full max-w-screen-sm flex-col"
   >
     <AtomsInput
@@ -29,21 +30,53 @@
       v-model="formData.message"
       @on-value-change="v$.message.$touch"
     />
-    <AtomsButton custom-class="flex justify-center mt-4" type="submit">{{
-      $t('contact.form.send')
-    }}</AtomsButton>
+    <AtomsButton
+      :disabled="submission.isBeingSubmitted"
+      custom-class="flex justify-center mt-4"
+      type="submit"
+      :isLoading="submission.isBeingSubmitted"
+      >{{ $t('contact.form.send') }}</AtomsButton
+    >
+    <div
+      class="my-4 flex items-center justify-between rounded-sm"
+      v-if="submission.submissionStatus"
+    >
+      <p>
+        {{ submission.submissionMessage }}
+      </p>
+      <client-only v-if="submission.submissionStatus === 'success'">
+        <Vue3Lottie
+          animationLink="contact-success-animation.json"
+          :height="100"
+          :width="100"
+        />
+      </client-only>
+    </div>
   </form>
 </template>
 
 <script setup lang="ts">
+  import { useVuelidate } from '@vuelidate/core'
+  import { required, email, maxLength, helpers } from '@vuelidate/validators'
+
+  type SubmissionStatus = null | 'success' | 'error'
+
+  const client = useSupabaseClient()
+
+  const form = ref()
+
+  const submission = ref({
+    isBeingSubmitted: false,
+    submissionStatus: null as SubmissionStatus,
+    submissionMessage: '',
+  })
+
   const { t } = useI18n()
   const formData = ref({
     email: '',
     subject: '',
     message: '',
   })
-  import { useVuelidate } from '@vuelidate/core'
-  import { required, email, maxLength, helpers } from '@vuelidate/validators'
 
   const rules = computed(() => {
     return {
@@ -81,8 +114,27 @@
   const handleFormSubmit = () => {
     v$.value.$validate()
     if (!v$.value.$error) {
-      console.log('Here api request.')
+      sendData()
     }
+  }
+
+  const sendData = async () => {
+    submission.value.isBeingSubmitted = true
+    const { data, error } = await client
+      .from('form_submissions')
+      .insert({ ...formData.value, seen: false })
+
+    submission.value.isBeingSubmitted = false
+
+    if (error) {
+      submission.value.submissionStatus = 'error'
+      submission.value.submissionMessage = t('contact.form.validations.error')
+      return
+    }
+
+    submission.value.submissionStatus = 'success'
+    submission.value.submissionMessage = t('contact.form.validations.success')
+    form.value.reset()
   }
 </script>
 

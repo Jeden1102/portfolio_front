@@ -1,6 +1,6 @@
 <template>
   <div
-    class="rounded text-gray-800"
+    class="flex items-center gap-0.5 rounded text-gray-800"
     :class="[variantClasses[type], typeClasses[variant], customClass]"
   >
     <slot></slot>
@@ -23,7 +23,7 @@
 
   const typeClasses = {
     small: 'px-2.5 py-0.5 text-xs font-medium',
-    medium: 'px-1.5 text-sm py-1 font-medium',
+    medium: 'px-2.5 text-sm py-1 font-medium',
     big: 'px-4 py-1.5 text-md font-medium',
   }
 

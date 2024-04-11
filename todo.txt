@@ -1,7 +1,6 @@
-4. db conntecton - about - new content type for timeline
---
-5. db connection - contact
---
 6. db connection - skills/projects
 --
 7. CoreWebVitals improvements.
+
+++
+Bg animation refator - split to new component ,fix z-indexes.

@@ -20,6 +20,9 @@ export default defineI18nConfig(() => ({
             invalidEmail: 'Invalid email format',
             maxLength: 'Max lenght is {length}',
             fieldRequired: 'The {field} field is required',
+            error:
+              'There was an error while sending your form. Try again later.',
+            success: 'Your message has been send succesfully!',
           },
         },
       },
@@ -64,6 +67,9 @@ export default defineI18nConfig(() => ({
             invalidEmail: 'Nieprawidłowy format e-maila',
             maxLength: 'Maksymalna długość to {length}',
             fieldRequired: 'Pole {field} jest wymagane',
+            error:
+              'Wystapil blad w trakcie wysylania Twojego formularza. Sproboj ponownie pozniej.',
+            success: 'Wiadomosc zostala wyslana poprawnie.',
           },
         },
       },

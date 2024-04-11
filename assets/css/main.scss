@@ -9,8 +9,12 @@
     @apply text-gray-100;
   }
 
+  body {
+    overflow-x: hidden;
+  }
+
   .atoms-button {
-    @apply flex cursor-pointer items-center rounded-xl bg-primary px-7 py-3 text-white transition-all hover:hidden hover:-translate-y-[1px] hover:opacity-90 hover:shadow-md;
+    @apply flex disabled:opacity-80 disabled:cursor-not-allowed cursor-pointer items-center rounded-xl bg-primary px-7 py-3 text-white transition-all hover:hidden hover:-translate-y-[1px] hover:opacity-90 hover:shadow-md;
 
     &.light {
       @apply bg-white text-gray-700;
