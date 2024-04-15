@@ -31,6 +31,7 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxtjs/supabase',
     '@nuxtjs/apollo',
+    '@pinia/nuxt',
   ],
   supabase: {
     redirect: false,

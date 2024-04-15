@@ -3,7 +3,7 @@
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
-    <MoleculesAppBgAnimations />
+    <MoleculesAppBgAnimations />r
   </div>
 </template>
 
