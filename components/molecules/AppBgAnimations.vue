@@ -1,6 +1,6 @@
 <template>
   <div
-    class="pointer-events-none absolute left-0 top-0 h-full w-full overflow-hidden"
+    class="hidden md:block pointer-events-none absolute left-0 top-0 h-full w-full overflow-hidden"
   >
     <div class="absolute bottom-0 left-0 rotate-45">
       <client-only>

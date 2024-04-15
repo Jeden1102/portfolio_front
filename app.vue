@@ -28,7 +28,7 @@
 </style>
 <script setup lang="ts">
   useHead({
-    title: 'My App',
+    title: '',
     meta: [
       {
         name: 'viewport',
