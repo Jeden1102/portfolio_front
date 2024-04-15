@@ -20,6 +20,7 @@
         </button>
       </div>
     </NuxtLayout>
+    <MoleculesAppBgAnimations />
   </div>
 </template>
 <script setup lang="ts">

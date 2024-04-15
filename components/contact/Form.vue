@@ -31,7 +31,7 @@
       @on-value-change="v$.message.$touch"
     />
     <AtomsButton
-      :disabled="submission.isBeingSubmitted"
+      :disabled="submission.isBeingSubmitted || submission.isSubmitted"
       custom-class="flex justify-center mt-4"
       type="submit"
       :isLoading="submission.isBeingSubmitted"
@@ -67,6 +67,7 @@
 
   const submission = ref({
     isBeingSubmitted: false,
+    isSubmitted: false,
     submissionStatus: null as SubmissionStatus,
     submissionMessage: '',
   })
@@ -132,6 +133,7 @@
       return
     }
 
+    submission.value.isSubmitted = true
     submission.value.submissionStatus = 'success'
     submission.value.submissionMessage = t('contact.form.validations.success')
     form.value.reset()
