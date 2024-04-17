@@ -50,7 +50,7 @@
       >
         <div class="h-52 md:h-96">
           <client-only>
-            <Vue3Lottie animationLink="hero-animation.json" height="100%" />
+            <Vue3Lottie animationLink="/hero-animation.json" height="100%" />
           </client-only>
         </div>
         <div class="mt-4 flex w-full gap-4 lg:mt-10">

@@ -9,7 +9,7 @@
         </h1>
         <client-only>
           <Vue3Lottie
-            animationLink="error-animation.json"
+            animationLink="/error-animation.json"
             :height="250"
             :width="250"
           />
@@ -29,6 +29,6 @@
   const props = defineProps({
     error: Object as () => NuxtError,
   })
-
+  console.log(props.error)
   const handleError = () => clearError({ redirect: '/' })
 </script>

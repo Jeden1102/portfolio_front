@@ -1,13 +1,27 @@
 import { defineStore } from 'pinia'
 
+interface State {
+  [key: string]: {}
+}
+
 export const useSkillsStore = defineStore('skills', {
-  state: () => ({ count: 0, name: 'Eduardo' }),
+  state: () => ({}) as State,
   getters: {
-    doubleCount: (state) => state.count * 2,
+    collection: (state) => {
+      return (table: string) => state[table]
+    },
   },
   actions: {
-    increment() {
-      this.count++
+    async fetchDbValues(table: string, key: string) {
+      const client = useSupabaseClient()
+      const { data, error } = await client.from(table).select('*')
+
+      if (error) {
+        console.log(error)
+        return
+      }
+
+      this[key] = data
     },
   },
 })

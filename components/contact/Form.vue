@@ -46,7 +46,7 @@
       </p>
       <client-only v-if="submission.submissionStatus === 'success'">
         <Vue3Lottie
-          animationLink="contact-success-animation.json"
+          animationLink="/contact-success-animation.json"
           :height="100"
           :width="100"
         />

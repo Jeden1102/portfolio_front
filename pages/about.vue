@@ -20,7 +20,7 @@
       <AboutSoftSkills />
       <client-only>
         <Vue3Lottie
-          animationLink="about-animation.json"
+          animationLink="/about-animation.json"
           :height="250"
           :width="250"
         />

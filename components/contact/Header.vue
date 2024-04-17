@@ -13,7 +13,7 @@
     </NuxtLink>
     <client-only>
       <Vue3Lottie
-        animationLink="contact-animation.json"
+        animationLink="/contact-animation.json"
         :height="150"
         :width="150"
       />
