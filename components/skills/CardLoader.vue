@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-w-72 flex-1 animate-pulse rounded-lg border border-red-800 bg-gray-900 p-6 shadow"
+    class="flex min-w-72 flex-1 animate-pulse flex-col gap-2 rounded-lg border border-gray-800 bg-gray-900 p-6 shadow"
   >
     <div
       class="flex h-10 w-10 items-center justify-center rounded bg-gray-300 dark:bg-gray-700"
@@ -17,9 +17,9 @@
         />
       </svg>
     </div>
-    <h5
-      class="mb-2 h-2 w-48 bg-gray-200 text-2xl font-semibold tracking-tight text-white"
-    ></h5>
-    <p class="mb-3 font-normal text-gray-400"></p>
+    <p
+      class="mb-2 h-4 w-48 bg-gray-200 text-2xl font-semibold tracking-tight text-white"
+    ></p>
+    <p class="mb-3 h-20 w-60 bg-gray-200 font-normal text-gray-400"></p>
   </div>
 </template>

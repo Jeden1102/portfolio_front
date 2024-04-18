@@ -1,21 +1,12 @@
 <template>
   <div class="flex flex-wrap gap-4">
-    <template v-if="category === 'projects'">
-      <SkillsProject
-        v-if="skillsStore.projects"
-        v-for="project in skillsStore.projects"
-        :project="project"
-      />
-      <div v-else>Loading...</div>
-    </template>
-    <template v-else>
-      <SkillsSkill
-        v-if="!skillsStore.skills"
-        v-for="skill in skillsStore.skills"
-        :skill="skill"
-      />
-      <SkillsSkillLoader v-for="i in 10" v-else />
-    </template>
+    <SkillsProject
+      v-if="category === 'projects'"
+      v-for="project in skillsStore.projects"
+      :project="project"
+    />
+    <SkillsSkill v-else v-for="skill in skillsStore.skills" :skill="skill" />
+    <SkillsCardLoader v-for="i in 8" v-if="showLoader()" />
   </div>
 </template>
 
@@ -25,6 +16,14 @@
   const route = useRoute()
 
   const category = route.params.category.toString()
+
+  const showLoader = () => {
+    if (category === 'projects') {
+      return !skillsStore.projects
+    }
+
+    return !skillsStore.skills
+  }
 
   watch(
     () => skillsStore.skillsGroup,

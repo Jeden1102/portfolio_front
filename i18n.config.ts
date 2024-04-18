@@ -43,6 +43,8 @@ export default defineI18nConfig(() => ({
       skills: {
         list: 'Display in list',
         fancy: 'Display in fancy style',
+        live: 'Live',
+        code: 'Code',
       },
       homePage: 'Home',
       aboutPage: 'About me',
@@ -90,6 +92,8 @@ export default defineI18nConfig(() => ({
       skills: {
         list: 'Wyświetl w formie listy',
         fancy: 'Wyświetl w stylu fancy',
+        live: 'Live',
+        code: 'Kod',
       },
       homePage: 'Strona główna',
       aboutPage: 'O mnie',
