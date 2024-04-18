@@ -14,7 +14,7 @@
             data-aos="fade-up"
             class="text-3xl font-bold md:text-4xl lg:text-7xl"
             v-html="
-              locale === 'en' ? headingData?.heading_en : headingData?.heading
+              useLocaleRenderer(headingData.heading_en, headingData.heading)
             "
           ></h1>
           <p
@@ -22,9 +22,10 @@
             data-aos-delay="100"
             class="mb-4 text-sm font-light md:text-lg"
             v-html="
-              locale === 'en'
-                ? headingData?.description_en
-                : headingData?.description
+              useLocaleRenderer(
+                headingData.description_en,
+                headingData.description,
+              )
             "
           ></p>
           <p data-aos="fade-up" data-aos-delay="150">
@@ -76,8 +77,6 @@
   import { Vue3Lottie } from 'vue3-lottie'
 
   import type { HomeHero } from '../../types/home'
-
-  const { locale } = useI18n()
 
   const headingData = ref<HomeHero | null>(null)
 

@@ -11,9 +11,8 @@
         class="text-lg lg:text-2xl"
         data-aos="fade-up"
         data-aos-delay="150"
-        v-html="
-          locale === 'en' ? headingData?.heading_en : headingData?.heading
-        "
+        v-if="headingData"
+        v-html="useLocaleRenderer(headingData.heading_en, headingData.heading)"
       ></p>
 
       <h1 class="text-lg">{{ $t('about.softSkills') }}</h1>
@@ -50,8 +49,6 @@
   import { Vue3Lottie } from 'vue3-lottie'
 
   import type { HomeHero } from '../types/home.ts'
-
-  const { locale } = useI18n()
 
   const headingData = ref<HomeHero | null>(null)
 

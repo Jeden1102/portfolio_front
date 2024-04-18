@@ -19,7 +19,7 @@
       }}</time>
       <p
         class="mb-4 text-base font-normal text-gray-300"
-        v-html="locale === 'en' ? t.description_en : t.description"
+        v-html="useLocaleRenderer(t.description_en, t.description)"
       ></p>
     </li>
   </ol>
@@ -27,8 +27,6 @@
 
 <script setup lang="ts">
   import type { Timeline } from '../../types/timeline.ts'
-
-  const { locale } = useI18n()
 
   const timeline = ref<Timeline[]>([])
 

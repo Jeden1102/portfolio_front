@@ -2,7 +2,8 @@
   <div class="text-gray-200">
     <p
       class="text-center font-light sm:text-xl"
-      v-html="locale === 'en' ? headingData?.heading_en : headingData?.heading"
+      v-if="headingData"
+      v-html="useLocaleRenderer(headingData.heading_en, headingData.heading)"
     ></p>
     <p class="text-center md:hidden">-OR-</p>
     <NuxtLink
@@ -25,8 +26,6 @@
   import { Vue3Lottie } from 'vue3-lottie'
 
   import type { ContactHero } from '../../types/contact'
-
-  const { locale } = useI18n()
 
   const headingData = ref<ContactHero | null>(null)
 
