@@ -2,11 +2,21 @@
   <div
     class="flex min-w-60 flex-1 flex-col gap-2 rounded-lg border border-gray-800 bg-gray-900 p-4 shadow"
   >
-    <img
-      class="mx-auto h-52 w-full rounded-md object-cover"
-      :src="getImgUri(project.file)"
-      alt=""
-    />
+    <ImgComparisonSlider value="0">
+      <img
+        class="mx-auto h-52 w-full rounded-md object-cover"
+        :src="getImgUri(project.file)"
+        alt=""
+        slot="first"
+      />
+      <img
+        class="mx-auto h-52 w-full rounded-md object-cover"
+        :src="getImgUri(project.file)"
+        alt=""
+        slot="second"
+      />
+    </ImgComparisonSlider>
+
     <h5 class="mb-2 text-2xl font-semibold tracking-tight text-white">
       {{ project?.name }}
     </h5>
@@ -33,6 +43,7 @@
 </template>
 
 <script setup lang="ts">
+  import { ImgComparisonSlider } from '@img-comparison-slider/vue'
   import type { Project } from '~/types/project'
   interface Props {
     project: Project
