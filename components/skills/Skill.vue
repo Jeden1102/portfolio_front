@@ -1,15 +1,17 @@
 <template>
   <div
-    class="max-w-sm rounded-lg border border-gray-800 bg-gray-900 p-6 shadow"
+    class="min-w-72 flex-1 rounded-lg border border-gray-800 bg-gray-900 p-6 shadow"
   >
-    <Icon class="mb-3 text-4xl" :name="skill.icon_name" />
-    <a href="#">
-      <h5 class="mb-2 text-2xl font-semibold tracking-tight text-white">
-        {{ skill.name }}
-      </h5>
-    </a>
+    <Icon
+      v-if="skill.icon_name"
+      class="mb-3 text-4xl"
+      :name="skill.icon_name"
+    />
+    <h5 class="mb-2 text-2xl font-semibold tracking-tight text-white">
+      {{ skill?.name }}
+    </h5>
     <p class="mb-3 font-normal text-gray-400">
-      {{ skill.description_en }}
+      {{ useLocaleRenderer(skill.description_en, skill.description) }}
     </p>
   </div>
 </template>

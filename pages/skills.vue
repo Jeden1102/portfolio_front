@@ -19,6 +19,10 @@
 <script setup lang="ts">
   const skills = useSkillsStore()
 
+  definePageMeta({
+    pageTransition: false,
+  })
+
   onMounted(async () => {
     await skills.fetchDbValues('skills_group', 'skillsGroup')
   })
