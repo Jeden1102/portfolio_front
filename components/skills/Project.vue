@@ -5,7 +5,7 @@
     <ImgComparisonSlider value="0">
       <img
         class="mx-auto h-52 w-full rounded-md object-cover"
-        :src="getImgUri(project.file)"
+        :src="getImgUri(project.file_desktop)"
         alt=""
         slot="first"
       />
