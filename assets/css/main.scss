@@ -14,11 +14,15 @@
   }
 
   .atoms-button {
-    @apply flex disabled:opacity-80 disabled:cursor-not-allowed cursor-pointer items-center rounded-xl bg-primary px-7 py-3 text-white transition-all hover:hidden hover:-translate-y-[1px] hover:opacity-90 hover:shadow-md;
+    @apply flex cursor-pointer items-center rounded-xl bg-primary px-7 py-3 text-white transition-all hover:hidden hover:-translate-y-[1px] hover:opacity-90 hover:shadow-md disabled:cursor-not-allowed disabled:opacity-80;
 
     &.light {
       @apply bg-white text-gray-700;
     }
+  }
+
+  .google-button {
+    @apply rounded-md border border-white bg-gray-100 px-4 py-2 text-sm text-gray-800 hover:border-gray-200 hover:shadow-sm;
   }
 
   .atoms-input {
@@ -44,10 +48,10 @@
   }
 
   .menu-link {
-    @apply relative flex text-center leading-3 min-h-14 flex-1 flex-col items-center justify-center px-2 py-2 text-xs text-gray-700 lg:min-h-0 lg:flex-auto lg:text-sm;
+    @apply relative flex min-h-14 flex-1 flex-col items-center justify-center px-2 py-2 text-center text-xs leading-3 text-gray-700 lg:min-h-0 lg:flex-auto lg:text-sm;
 
     &__text {
-      @apply relative z-10 h-0 leading-3 opacity-0 transition-all lg:group-hover:text-white lg:h-4 lg:opacity-100;
+      @apply relative z-10 h-0 leading-3 opacity-0 transition-all lg:h-4 lg:opacity-100 lg:group-hover:text-white;
     }
 
     svg {

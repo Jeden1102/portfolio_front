@@ -1,8 +1,8 @@
 <template>
   <div
-    class="flex min-w-60 flex-1 flex-col gap-2 rounded-lg border border-gray-800 bg-gray-900 p-4 shadow"
+    class="flex min-w-60 flex-1 flex-col rounded-lg border border-gray-800 bg-gray-900 p-4 shadow"
   >
-    <ImgComparisonSlider value="0">
+    <ImgComparisonSlider value="0" class="slider-example-focus">
       <img
         class="mx-auto h-52 w-full rounded-md object-cover"
         :src="getImgUri(project.file_desktop)"
@@ -17,13 +17,32 @@
       />
     </ImgComparisonSlider>
 
-    <h5 class="mb-2 text-2xl font-semibold tracking-tight text-white">
+    <h5 class="my-2 text-2xl font-semibold tracking-tight text-white">
       {{ project?.name }}
     </h5>
+
     <p class="mb-3 font-normal text-gray-400">
       {{ useLocaleRenderer(project.description_en, project.description) }}
     </p>
-    <div class="mt-4 flex w-full gap-2 lg:mt-10">
+
+    <p class="font-semibold">Project features</p>
+    <div v-for="feature in projectFeatures" class="flex items-center gap-2">
+      <Icon name="solar:check-square-bold-duotone" />
+      <span>
+        {{ feature.project_feature }}
+      </span>
+    </div>
+
+    <p class="mb-1 mt-2 font-semibold">Used technologies</p>
+    <AtomsBadge
+      v-for="skill in projectSkills"
+      variant="small"
+      custom-class="gap-1 w-fit"
+    >
+      <span>{{ skill.name }}</span>
+    </AtomsBadge>
+
+    <div class="mt-auto flex w-full gap-2 pt-4">
       <NuxtLink
         class="atoms-button flex w-full justify-center gap-2 text-center"
         :to="project.uri_live"
@@ -56,4 +75,30 @@
   }
 
   const props = defineProps<Props>()
+
+  const skillsStore = useSkillsStore()
+
+  const projectFeatures = computed(() => {
+    const allFeatures = skillsStore.project_feature
+
+    if (!props.project.project_feature || !allFeatures) return
+
+    return allFeatures.filter((feature) =>
+      props.project.project_feature.includes(feature.id),
+    )
+  })
+
+  const projectSkills = computed(() => {
+    const allSkills = skillsStore.skill
+
+    if (!props.project.skill || !allSkills) return
+
+    return allSkills.filter((skill) => props.project.skill.includes(skill.id))
+  })
 </script>
+
+<style>
+  .slider-example-focus:focus {
+    outline: none;
+  }
+</style>

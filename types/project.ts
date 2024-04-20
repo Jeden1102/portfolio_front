@@ -7,4 +7,6 @@ export interface Project {
   file_desktop: string
   uri_live: string
   uri_github: string
+  project_feature: number[]
+  skill: string[]
 }
