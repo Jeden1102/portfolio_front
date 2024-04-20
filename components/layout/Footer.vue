@@ -5,7 +5,7 @@
     <div class="container-custom footer-links flex gap-4">
       <NuxtLink to="/"> {{ $t('homePage') }} </NuxtLink>
       <NuxtLink to="/about"> {{ $t('aboutPage') }} </NuxtLink>
-      <NuxtLink to="/skills/list"> {{ $t('skillsPage') }} </NuxtLink>
+      <NuxtLink to="/skills/list/frontend"> {{ $t('skillsPage') }} </NuxtLink>
       <NuxtLink to="/contact"> {{ $t('contactPage') }} </NuxtLink>
     </div>
   </footer>

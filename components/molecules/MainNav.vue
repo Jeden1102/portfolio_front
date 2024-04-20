@@ -13,7 +13,7 @@
       <span class="menu-link__text">{{ $t('aboutPage') }}</span>
       <span class="menu-link-hover"></span>
     </NuxtLink>
-    <NuxtLink class="menu-link group" to="/skills/list">
+    <NuxtLink class="menu-link group" to="/skills/list/frontend">
       <Icon name="solar:clapperboard-edit-broken" class="text-xl lg:hidden" />
       <span class="menu-link__text">{{ $t('skillsPage') }}</span>
       <span class="menu-link-hover"></span>
