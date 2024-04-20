@@ -1,6 +1,3 @@
 6. db connection - skills/projects
 --
 7. CoreWebVitals improvements.
-
-++
-Bg animation refator - split to new component ,fix z-indexes.
