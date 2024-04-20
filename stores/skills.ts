@@ -46,7 +46,6 @@ export const useSkillsStore = defineStore('skills', {
       }
 
       this.skills = data
-      console.log(this.skills)
     },
   },
 })
