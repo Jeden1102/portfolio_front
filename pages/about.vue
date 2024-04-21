@@ -1,9 +1,9 @@
 <template>
   <div
-    class="container-custom my-8 flex flex-col items-center gap-8 text-gray-200 md:flex-row lg:gap-20"
+    class="container-custom w-full my-8 flex flex-col items-center gap-8 text-gray-200 md:flex-row lg:gap-20"
   >
     <div
-      class="mb-6 flex flex-col gap-2 rounded-md"
+      class="mb-6 flex flex-col gap-2 rounded-md flex-1"
       data-aos="fade-up"
       data-aos-delay="100"
     >
@@ -37,7 +37,7 @@
         {{ $t('about.myJourney') }} <Icon name="solar:alt-arrow-down-outline" />
       </NuxtLink>
     </div>
-    <div id="journey" class="py-4">
+    <div id="journey" class="py-4 flex flex-col flex-1">
       <p data-aos="fade-up" data-aos-delay="200">
         {{ $t('about.title') }}
       </p>

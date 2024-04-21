@@ -3,7 +3,7 @@
     <li
       class="mb-10 ms-6"
       v-for="t in timeline"
-      data-aos="fade-right"
+      data-aos="fade-down"
       data-aos-delay="100"
     >
       <span

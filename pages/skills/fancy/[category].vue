@@ -1,12 +1,12 @@
 <template>
-  <div class="flex flex-wrap gap-4">
-    <SkillsProject
-      v-if="category === 'projects'"
-      v-for="project in skillsStore.projects"
+  <div class="flex flex-col">
+    <SkillsFancyProject
+      v-for="project in category === 'projects'
+        ? skillsStore.projects
+        : skillsStore.skills"
       :project="project"
     />
-    <SkillsSkill v-else v-for="skill in skillsStore.skills" :skill="skill" />
-    <SkillsCardLoader v-for="i in 8" v-if="showLoader()" />
+    <SkillsFancyLoader v-for="i in 8" v-if="showLoader()" />
   </div>
 </template>
 
@@ -35,8 +35,6 @@
   const fetchSkillData = () => {
     if (category === 'projects') {
       skillsStore.fetchDbValues('projects', 'projects')
-      skillsStore.fetchDbValues('project_feature', 'project_feature')
-      skillsStore.fetchDbValues('skill', 'skill')
     } else {
       const skillGroupID = skillsStore.getSkillGroupID(category)
       skillsStore.fetchSkillsByGroup(skillGroupID)
