@@ -26,7 +26,7 @@
       </client-only>
       <NuxtLink
         class="atoms-button mx-auto mb-4 mt-4 flex w-fit justify-center text-center"
-        to="/skills"
+        to="/skills/list/frontend"
       >
         {{ $t('skillsPage') }}
       </NuxtLink>
