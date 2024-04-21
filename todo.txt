@@ -1,3 +1,4 @@
-6. db connection - skills/projects
---
-7. CoreWebVitals improvements.
+1. Not found fancy style.
+2. Tooltip for fancy style.
+3. Code cleaning.
+4. CoreWebVitals improvements.
