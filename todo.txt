@@ -1,4 +1,6 @@
 1. Not found fancy style.
 2. Tooltip for fancy style.
 3. Code cleaning.
+3.1 Active state skills.
+3.2 Translations update.
 4. CoreWebVitals improvements.
