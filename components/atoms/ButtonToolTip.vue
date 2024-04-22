@@ -4,7 +4,7 @@
       {{ button }}
     </button>
     <span
-      class="pointer-events-none absolute bottom-6 left-0 z-10 min-w-72 translate-y-2 rounded-md border border-gray-300 bg-white px-4 py-2 opacity-0 shadow-sm transition-all group-hover:translate-y-0 group-hover:opacity-100"
+      class="pointer-events-none absolute -left-12 bottom-6 z-10 min-w-72 translate-y-2 rounded-md border border-gray-300 bg-white px-3 py-2 opacity-0 shadow-sm transition-all group-hover:translate-y-0 group-hover:opacity-100"
     >
       {{ tooltip }}
     </span>

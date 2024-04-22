@@ -5,7 +5,7 @@
         class="container-custom flex flex-col items-center justify-center py-4"
       >
         <h1 class="text-3xl font-bold md:text-5xl">
-          Error {{ error.statusCode }}
+          {{ $t('error.error', { code: error.statusCode }) }}
         </h1>
         <client-only>
           <Vue3Lottie
@@ -14,9 +14,9 @@
             :width="250"
           />
         </client-only>
-        <p>Oh no... it looks your are lost.</p>
+        <p>{{ $t('error.desc') }}</p>
         <button @click="handleError" class="atoms-button my-4" to="/">
-          Take me home
+          {{ $t('error.home') }}
         </button>
       </div>
     </NuxtLayout>

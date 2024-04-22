@@ -5,7 +5,10 @@
   >
     <div
       class="flex w-full items-center gap-8"
-      :class="{ 'flex-row': isSubPageOpened, 'flex-col': !isSubPageOpened }"
+      :class="{
+        'flex-col md:flex-row': isSubPageOpened,
+        'flex-col': !isSubPageOpened,
+      }"
     >
       <img
         src="@/assets/images/google-logo.png"
@@ -45,9 +48,11 @@
           :class="`google-button ${!canNavigate ? 'pointer-events-none' : ''}`"
           :to="`/skills/fancy/${searchValue.toLowerCase()}`"
         >
-          Szukaj w Google
+          {{ $t('skills.googleSearch') }}
         </NuxtLink>
-        <button class="google-button">Szczęśliwy traf</button>
+        <button @click="handleFeelingLucky" class="google-button">
+          {{ $t('skills.feelingLucky') }}
+        </button>
       </div>
     </div>
     <AtomsButtonToolTip
@@ -63,6 +68,8 @@
   const router = useRouter()
   const route = useRoute()
 
+  const skillsStore = useSkillsStore()
+
   const searchValue = ref(route.params.category?.toString() ?? '')
 
   const canNavigate = computed(() => {
@@ -72,6 +79,21 @@
   const isSubPageOpened = computed(() => {
     return router.currentRoute.value.params.category
   })
+
+  const handleFeelingLucky = () => {
+    const categories = skillsStore.collection('skillsGroup')
+
+    const randomCategory =
+      categories[Math.floor(Math.random() * categories.length)]
+
+    const categorySlug = randomCategory.skill_en.toLowerCase()
+
+    searchValue.value = categorySlug
+
+    router.push({
+      path: `/skills/fancy/${categorySlug}`,
+    })
+  }
 </script>
 
 <style scoped></style>
