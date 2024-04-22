@@ -139,5 +139,3 @@
     form.value.reset()
   }
 </script>
-
-<style scoped></style>

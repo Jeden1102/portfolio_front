@@ -1,8 +1,8 @@
 <template>
   <div class="text-gray-800">
-    <p>Podana fraza - {{ phrase }} - nie została odnaleziona.</p>
-    <p>Podpowiedzi:</p>
-    <p class="mt-2">Uzyj jednej z ponizszych fraz:</p>
+    <p v-html="$t('skills.empty', { phrase: phrase })"></p>
+    <p>{{ $t('skills.tips') }}</p>
+    <p class="mt-2">{{ $t('skills.useOneOfPhrase') }}</p>
     <ul class="list-disc pl-4">
       <li v-for="p in phrases">
         {{ p.skill_en }}

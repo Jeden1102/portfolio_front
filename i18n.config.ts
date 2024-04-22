@@ -25,6 +25,10 @@ export default defineI18nConfig(() => ({
             success: 'Your message has been send succesfully!',
           },
         },
+        header: {
+          or: '-OR-',
+          other: 'Show other contact options',
+        },
       },
       home: {
         hero: {
@@ -45,6 +49,11 @@ export default defineI18nConfig(() => ({
         fancy: 'Display in fancy style',
         live: 'Live',
         code: 'Code',
+        empty: 'Phrase <b>{ phrase }</b> has not been found.',
+        tips: 'Tips:',
+        useOneOfPhrase: 'Use on of the phrase',
+        features: 'Project features',
+        technologies: 'Used technologies',
       },
       homePage: 'Home',
       aboutPage: 'About me',
@@ -74,6 +83,10 @@ export default defineI18nConfig(() => ({
             success: 'Wiadomosc zostala wyslana poprawnie.',
           },
         },
+        header: {
+          or: '-LUB-',
+          other: 'Sprawdz inne opcje kontaktu',
+        },
       },
       home: {
         hero: {
@@ -94,6 +107,11 @@ export default defineI18nConfig(() => ({
         fancy: 'Wyświetl w stylu fancy',
         live: 'Live',
         code: 'Kod',
+        empty: 'Podana fraza - <b>{ phrase }</b> - nie została odnaleziona.',
+        tips: 'Podpowiedzi:',
+        useOneOfPhrase: 'Uzyj jeden z fraz:',
+        features: 'Cechy projektu',
+        technologies: 'Uzyte technologie',
       },
       homePage: 'Strona główna',
       aboutPage: 'O mnie',

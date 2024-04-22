@@ -5,12 +5,15 @@
       v-if="headingData"
       v-html="useLocaleRenderer(headingData.heading_en, headingData.heading)"
     ></p>
-    <p class="text-center md:hidden">-OR-</p>
+    <p class="text-center md:hidden">
+      {{ $t('contact.header.or') }}
+    </p>
     <NuxtLink
       href="#contact-options"
       class="block animate-bounce text-center font-bold md:hidden"
     >
-      Show other contact options <Icon name="solar:alt-arrow-down-outline" />
+      {{ $t('contact.header.other') }}
+      <Icon name="solar:alt-arrow-down-outline" />
     </NuxtLink>
     <client-only>
       <Vue3Lottie

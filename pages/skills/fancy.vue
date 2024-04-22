@@ -1,7 +1,7 @@
 <template>
   <div
     class="z-10 flex min-h-[70vh] flex-col gap-8 rounded-md bg-white p-8"
-    :class="{ 'justify-center': !isSubPageOpened }"
+    :class="{ 'items-center justify-center': !isSubPageOpened }"
   >
     <div
       class="flex w-full items-center gap-8"
@@ -50,7 +50,11 @@
         <button class="google-button">Szczęśliwy traf</button>
       </div>
     </div>
-
+    <AtomsButtonToolTip
+      v-if="!isSubPageOpened"
+      button="Jak to dziala?"
+      tooltip="Wpisz nazwe jednej z kategorii (np. 'frontend') w polu wyszukiwania, by poznac wiecej informacji o mnie :)"
+    />
     <NuxtPage />
   </div>
 </template>

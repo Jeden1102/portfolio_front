@@ -2,7 +2,7 @@
   <div
     class="flex min-w-60 flex-1 flex-col rounded-lg border border-gray-800 bg-gray-900 p-4 shadow"
   >
-    <ImgComparisonSlider value="0" class="slider-example-focus">
+    <ImgComparisonSlider value="0" class="image-slider">
       <img
         class="mx-auto h-52 w-full rounded-md object-cover"
         :src="getImgUri(project.file_desktop)"
@@ -25,7 +25,9 @@
       {{ useLocaleRenderer(project.description_en, project.description) }}
     </p>
 
-    <p class="font-semibold">Project features</p>
+    <p class="font-semibold">
+      {{ $t('skills.features') }}
+    </p>
     <div v-for="feature in projectFeatures" class="flex items-center gap-2">
       <Icon name="solar:check-square-bold-duotone" />
       <span>
@@ -33,7 +35,7 @@
       </span>
     </div>
 
-    <p class="mb-1 mt-2 font-semibold">Used technologies</p>
+    <p class="mb-1 mt-2 font-semibold">{{ $t('skills.technologies') }}</p>
     <AtomsBadge
       v-for="skill in projectSkills"
       variant="small"
@@ -98,7 +100,7 @@
 </script>
 
 <style>
-  .slider-example-focus:focus {
+  .image-slider:focus {
     outline: none;
   }
 </style>
