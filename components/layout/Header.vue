@@ -12,7 +12,7 @@
           format="webp"
           width="24"
           height="24"
-          src="/images/logo-icon.png"
+          src="images/logo-icon.png"
           alt="Page logo"
           class="h-6 w-6"
         />
