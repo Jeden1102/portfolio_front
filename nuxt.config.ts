@@ -53,4 +53,7 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  image: {
+    provider: 'ipx',
+  },
 })
