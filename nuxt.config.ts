@@ -32,6 +32,7 @@ export default defineNuxtConfig({
     '@nuxtjs/supabase',
     '@nuxtjs/apollo',
     '@pinia/nuxt',
+    '@nuxt/image-edge',
   ],
   supabase: {
     redirect: false,
@@ -54,5 +55,6 @@ export default defineNuxtConfig({
   },
   image: {
     dir: 'assets/images',
+    provider: 'ipx',
   },
 })
