@@ -28,12 +28,20 @@
 </style>
 <script setup lang="ts">
   useHead({
-    title: '',
+    title: 'Dominik Raducki Portfolio',
+    htmlAttrs: {
+      lang: 'en',
+    },
+    titleTemplate: (titleChunk) => {
+      return titleChunk
+        ? `${titleChunk} | Dominik Raducki Portfolio`
+        : 'Dominik Raducki Portfolio'
+    },
     meta: [
       {
-        name: 'viewport',
+        name: 'description',
         content:
-          'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no',
+          'Frontend developer with more than 2 years of commercial experience. Skilled in Vue, Typescript, Nuxt and Drupal.',
       },
     ],
   })

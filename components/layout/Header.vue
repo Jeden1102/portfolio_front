@@ -8,11 +8,13 @@
           <span class="text-gray-600">Dominik</span>
           <span class="text-primary">Raducki</span>
         </p>
-        <img
+        <NuxtImg
+          format="webp"
           width="24"
           height="24"
-          src="@/assets/images/logo-icon.png"
+          src="/logo-icon.png"
           alt="Page logo"
+          class="h-6 w-6"
         />
       </NuxtLink>
       <MoleculesMainNav />

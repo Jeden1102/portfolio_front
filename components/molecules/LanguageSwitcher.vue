@@ -12,7 +12,7 @@
           :class="{
             'rounded bg-white bg-opacity-20 font-semibold text-primary hover:bg-opacity-30 lg:px-0':
               locale === lang.value,
-            'bg-opacity-10 text-gray-400 hover:bg-opacity-20':
+            'bg-opacity-10 text-gray-700 hover:bg-opacity-20':
               locale !== lang.value,
           }"
         >

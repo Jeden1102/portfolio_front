@@ -52,4 +52,7 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  image: {
+    dir: 'assets/images',
+  },
 })

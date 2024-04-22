@@ -19,6 +19,10 @@
 <script setup lang="ts">
   const skills = useSkillsStore()
 
+  useHead({
+    title: 'Skills',
+  })
+
   definePageMeta({
     pageTransition: false,
   })

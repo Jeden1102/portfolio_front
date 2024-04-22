@@ -11,6 +11,13 @@
 
   body {
     overflow-x: hidden;
+
+    input[type="email"],
+    input[type="text"],
+    select:focus,
+    textarea {
+      @apply text-base;
+    }
   }
 
   .atoms-button {

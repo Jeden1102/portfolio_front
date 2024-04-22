@@ -25,6 +25,10 @@
 
   const contactData = ref<ContactLinks | null>(null)
 
+  useHead({
+    title: 'Contact',
+  })
+
   const client = useSupabaseClient()
 
   const getData = async () => {
