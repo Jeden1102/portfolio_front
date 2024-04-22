@@ -79,7 +79,7 @@
   }
 
   .menu-link-hover {
-    @apply pointer-events-none absolute -bottom-0.5 left-0 z-0 hidden h-0 w-full bg-primary transition-all group-hover:h-full lg:block;
+    @apply pointer-events-none absolute bottom-0 left-0 z-0 hidden h-0 w-full bg-primary transition-all group-hover:h-full lg:block;
   }
 
   .footer-links {
