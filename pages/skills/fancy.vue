@@ -12,6 +12,7 @@
     >
       <img
         src="@/assets/images/google-logo.png"
+        loading="lazy"
         class="h-auto"
         :class="{ 'w-24': isSubPageOpened, 'w-52': !isSubPageOpened }"
       />

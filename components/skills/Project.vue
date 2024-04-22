@@ -6,13 +6,15 @@
       <img
         class="mx-auto h-52 w-full rounded-md object-cover"
         :src="getImgUri(project.file_desktop)"
-        alt=""
+        alt="First project image"
+        loading="lazy"
         slot="first"
       />
       <img
         class="mx-auto h-52 w-full rounded-md object-cover"
         :src="getImgUri(project.file)"
-        alt=""
+        alt="Second project image"
+        loading="lazy"
         slot="second"
       />
     </ImgComparisonSlider>

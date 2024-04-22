@@ -57,13 +57,13 @@
         <div class="mt-4 flex w-full gap-4 lg:mt-10">
           <NuxtLink
             class="atoms-button flex w-full justify-center text-center"
-            to="/skills"
+            to="/skills/list/frontend"
           >
             {{ $t('home.hero.skills') }}
           </NuxtLink>
           <NuxtLink
             class="atoms-button light flex w-full justify-center text-center"
-            to="/skills"
+            to="/contact"
           >
             {{ $t('home.hero.contact') }}
           </NuxtLink>
