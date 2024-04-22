@@ -27,10 +27,13 @@ export const useSkillsStore = defineStore('skills', {
 
       if (error) {
         console.log(error)
-        return
+        this[key] = []
+        return false
       }
 
       this[key] = data
+
+      return true
     },
 
     async fetchSkillsByGroup(group: string) {
@@ -42,10 +45,13 @@ export const useSkillsStore = defineStore('skills', {
 
       if (error) {
         console.log(error)
-        return
+        this.skills = []
+        return false
       }
 
       this.skills = data
+
+      return true
     },
   },
 })

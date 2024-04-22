@@ -7,6 +7,11 @@
       :project="project"
     />
     <SkillsFancyLoader v-for="i in 8" v-if="showLoader()" />
+    <SkillsFancyEmpty
+      v-if="isFalseCategory"
+      :phrase="category"
+      :phrases="skillsStore.skillsGroup"
+    />
   </div>
 </template>
 
@@ -17,7 +22,11 @@
 
   const category = route.params.category.toString()
 
+  const isFalseCategory = ref(false)
+
   const showLoader = () => {
+    if (isFalseCategory.value) return false
+
     if (category === 'projects') {
       return !skillsStore.projects
     }
@@ -32,12 +41,13 @@
     },
   )
 
-  const fetchSkillData = () => {
+  const fetchSkillData = async () => {
     if (category === 'projects') {
-      skillsStore.fetchDbValues('projects', 'projects')
+      await skillsStore.fetchDbValues('projects', 'projects')
     } else {
-      const skillGroupID = skillsStore.getSkillGroupID(category)
-      skillsStore.fetchSkillsByGroup(skillGroupID)
+      const skillGroupID = await skillsStore.getSkillGroupID(category)
+      const res = await skillsStore.fetchSkillsByGroup(skillGroupID)
+      isFalseCategory.value = !res
     }
   }
 

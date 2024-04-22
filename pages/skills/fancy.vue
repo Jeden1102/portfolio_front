@@ -13,13 +13,13 @@
         :class="{ 'w-24': isSubPageOpened, 'w-52': !isSubPageOpened }"
       />
       <div
-        class="relative h-12 w-full max-w-[584px] rounded-3xl border border-gray-200"
+        class="relative h-12 w-full max-w-[584px] rounded-3xl border border-gray-200 text-red-500"
       >
         <input
           class="h-full w-full rounded-3xl text-gray-700 hover:shadow-lg"
           :class="{ 'pl-6': isSubPageOpened, 'pl-10': !isSubPageOpened }"
           type="text"
-          @keyup.enter="$router.push({ path: searchValue })"
+          @keyup.enter="$router.push({ path: searchValue.toLowerCase() })"
           v-model="searchValue"
         />
 
@@ -35,7 +35,7 @@
             <img src="@/assets/images/clear.svg" class="w-5" />
           </button>
 
-          <NuxtLink :to="`/skills/fancy/${searchValue}`">
+          <NuxtLink :to="`/skills/fancy/${searchValue.toLowerCase()}`">
             <img src="@/assets/images/search.svg" class="h-5" />
           </NuxtLink>
         </div>
@@ -43,7 +43,7 @@
       <div v-if="!isSubPageOpened" class="flex gap-2">
         <NuxtLink
           :class="`google-button ${!canNavigate ? 'pointer-events-none' : ''}`"
-          :to="`/skills/fancy/${searchValue}`"
+          :to="`/skills/fancy/${searchValue.toLowerCase()}`"
         >
           Szukaj w Google
         </NuxtLink>
