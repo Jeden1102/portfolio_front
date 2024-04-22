@@ -53,8 +53,4 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  image: {
-    dir: 'assets/images',
-    provider: process.env.VERCEL_ENV ? 'vercel' : 'ipx',
-  },
 })

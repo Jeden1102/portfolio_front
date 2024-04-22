@@ -11,7 +11,7 @@
       }"
     >
       <img
-        src="@/assets/images/google-logo.png"
+        src="/images/google-logo.png"
         loading="lazy"
         class="h-auto"
         :class="{ 'w-24': isSubPageOpened, 'w-52': !isSubPageOpened }"
@@ -36,11 +36,11 @@
             v-if="isSubPageOpened"
             class="border-r border-gray-200 pr-2"
           >
-            <img src="@/assets/images/clear.svg" class="w-5" />
+            <img src="/images/clear.svg" class="w-5" />
           </button>
 
           <NuxtLink :to="`/skills/fancy/${searchValue.toLowerCase()}`">
-            <img src="@/assets/images/search.svg" class="h-5" />
+            <img src="/images/search.svg" class="h-5" />
           </NuxtLink>
         </div>
       </div>
