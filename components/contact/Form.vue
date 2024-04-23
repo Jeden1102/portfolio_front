@@ -25,7 +25,7 @@
     <AtomsTextarea
       id="message"
       :placeholder="$t('contact.form.placeholders.message')"
-      label="Message"
+      :label = "$t('contact.form.labels.message')"
       :error-msg="v$.message.$errors[0]?.$message"
       v-model="formData.message"
       @on-value-change="v$.message.$touch"
