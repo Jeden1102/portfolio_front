@@ -23,7 +23,7 @@
           class="h-full w-full rounded-3xl text-gray-700 hover:shadow-lg"
           :class="{ 'pl-6': isSubPageOpened, 'pl-10': !isSubPageOpened }"
           type="text"
-          @keyup.enter="$router.push({ path: searchValue.toLowerCase() })"
+          @keyup.enter="navigateTo"
           v-model="searchValue"
         />
 
@@ -93,6 +93,12 @@
 
     router.push({
       path: `/skills/fancy/${categorySlug}`,
+    })
+  }
+
+  const navigateTo = () => {
+    router.push({
+      path: `/skills/fancy/${searchValue.value}`,
     })
   }
 </script>
