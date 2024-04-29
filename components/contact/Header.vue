@@ -9,7 +9,7 @@
       {{ $t('contact.header.or') }}
     </p>
     <NuxtLink
-      href="#contact-options"
+      @click="scrollToBottom"
       class="block animate-bounce text-center font-bold md:hidden"
     >
       {{ $t('contact.header.other') }}
@@ -33,6 +33,10 @@
   const headingData = ref<ContactHero | null>(null)
 
   const client = useSupabaseClient()
+
+  const scrollToBottom = () => {
+    window.scrollTo(0, document.body.scrollHeight)
+  }
 
   const getData = async () => {
     const { data, error } = await client
