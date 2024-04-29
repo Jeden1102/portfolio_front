@@ -41,6 +41,7 @@ export const useSkillsStore = defineStore('skills', {
       const { data, error } = await client
         .from('skill')
         .select('*')
+        .order('rating', { ascending: true })
         .eq('skills_group', group)
 
       if (error) {
