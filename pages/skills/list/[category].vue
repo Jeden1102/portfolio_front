@@ -1,12 +1,20 @@
 <template>
-  <div class="mt-4 grid gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-    <SkillsProject
-      v-if="category === 'projects'"
-      v-for="project in skillsStore.projects"
-      :project="project"
-    />
-    <SkillsSkill v-else v-for="skill in skillsStore.skills" :skill="skill" />
-    <SkillsCardLoader v-for="i in 8" v-if="showLoader()" />
+  <div class="flex flex-col gap-4">
+    <div class="mt-4 grid gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <SkillsProject
+        v-if="category === 'projects'"
+        v-for="project in skillsStore.projects"
+        :project="project"
+      />
+      <SkillsSkill v-else v-for="skill in skillsStore.skills" :skill="skill" />
+      <SkillsCardLoader v-for="i in 8" v-if="showLoader()" />
+    </div>
+    <p class="font-light text-gray-300" v-if="category === 'projects'">
+      {{ $t('skills.infoProjects') }}
+    </p>
+    <p class="font-light text-gray-300" v-else>
+      {{ $t('skills.infoSkills') }}
+    </p>
   </div>
 </template>
 

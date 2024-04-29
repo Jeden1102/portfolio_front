@@ -56,6 +56,10 @@ export default defineI18nConfig(() => ({
         technologies: 'Used technologies',
         googleSearch: 'Search in Google',
         feelingLucky: "I'm feeling lucky",
+        infoProjects:
+          "* Projects are being sorted by the project importance/complexity. So basically, on the top there are my best projects I'm proud of. On the bottom of the list are the projects which are not that important and complex.",
+        infoSkills:
+          "* Skills are being sorted by the skills knowledge level. So basically, on the top there are skills I've been using for a long time aspecially as a commercial usage. On the bottom, there are skills I'm not that familiar with, but still used them in some projects (also commercial).",
       },
       error: {
         desc: 'O nie... wyglada na to, ze sie zgubiles.',
@@ -121,6 +125,10 @@ export default defineI18nConfig(() => ({
         technologies: 'Uzyte technologie',
         googleSearch: 'Szukaj w Google',
         feelingLucky: 'Szczesliwy traf',
+        infoProjects:
+          '* Projekty są sortowane według ważności/złożoności projektu. Zatem w zasadzie na górze znajdują się moje najlepsze projekty, z których jestem dumny. Na dole listy znajdują się projekty, które nie są aż tak ważne i złożone.',
+        infoSkills:
+          '* Umiejętności są sortowane według poziomu wiedzy umiejętności. Zasadniczo na górze znajdują się umiejętności, których używam od dłuższego czasu, szczególnie w celach komercyjnych. Na dole znajdują się umiejętności, z którymi nie jestem zbyt zaznajomiony, ale nadal korzystam z nich w niektórych projektach (także komercyjnych).',
       },
       error: {
         desc: 'Oh no... it looks your are lost.',
