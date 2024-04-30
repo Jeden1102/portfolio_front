@@ -23,7 +23,7 @@
       {{ project?.name }}
     </h5>
 
-    <p class="mb-3 font-normal text-gray-400">
+    <p class="mb-1 font-normal text-gray-400">
       {{ useLocaleRenderer(project.description_en, project.description) }}
     </p>
 
@@ -38,13 +38,15 @@
     </div>
 
     <p class="mb-1 mt-2 font-semibold">{{ $t('skills.technologies') }}</p>
-    <AtomsBadge
-      v-for="skill in projectSkills"
-      variant="small"
-      custom-class="gap-1 w-fit"
-    >
-      <span>{{ skill.name }}</span>
-    </AtomsBadge>
+    <div class="flex flex-wrap gap-2">
+      <AtomsBadge
+        v-for="skill in projectSkills"
+        variant="small"
+        custom-class="gap-1 w-fit"
+      >
+        <span>{{ skill.name }}</span>
+      </AtomsBadge>
+    </div>
 
     <div class="mt-auto flex w-full gap-2 pt-4">
       <NuxtLink

@@ -80,7 +80,7 @@ export default defineI18nConfig(() => ({
             message: 'Wiadomość',
           },
           placeholders: {
-            subject: 'Tylko pytanie',
+            subject: 'Pytanie',
             message: 'Cześć! Chciałbym zapytać o...',
           },
           send: 'Wyślij wiadomość',
@@ -90,13 +90,13 @@ export default defineI18nConfig(() => ({
             maxLength: 'Maksymalna długość to {length}',
             fieldRequired: 'Pole {field} jest wymagane',
             error:
-              'Wystapil blad w trakcie wysylania Twojego formularza. Sproboj ponownie pozniej.',
-            success: 'Wiadomosc zostala wyslana poprawnie.',
+              'Wystąpił błąd w trakcie wysyłania Twojego formularza. Spróbuj ponownie później.',
+            success: 'Wiadomość została wysłana poprawnie.',
           },
         },
         header: {
           or: '-LUB-',
-          other: 'Sprawdz inne opcje kontaktu',
+          other: 'Sprawdź inne opcje kontaktu',
         },
       },
       home: {
@@ -109,9 +109,9 @@ export default defineI18nConfig(() => ({
       },
       about: {
         softSkills: 'Umiejętności miękkie',
-        myJourney: 'Moja podróż',
+        myJourney: 'Moja historia',
         title:
-          'Pozwól mi się przedstawić, abyś mógł/mogła mnie lepiej poznać. Na poniższym osi czasu znajdują się najważniejsze momenty mojej kariery.',
+          'Pozwól mi się przedstawić, abyś mógł/mogła mnie lepiej poznać. Na poniższej osi czasu znajdują się najważniejsze momenty mojej kariery.',
       },
       skills: {
         list: 'Wyświetl w formie listy',
@@ -120,25 +120,26 @@ export default defineI18nConfig(() => ({
         code: 'Kod',
         empty: 'Podana fraza - <b>{ phrase }</b> - nie została odnaleziona.',
         tips: 'Podpowiedzi:',
-        useOneOfPhrase: 'Uzyj jeden z fraz:',
+        useOneOfPhrase: 'Użyj jednej z fraz:',
         features: 'Cechy projektu',
-        technologies: 'Uzyte technologie',
+        technologies: 'Użyte technologie',
         googleSearch: 'Szukaj w Google',
-        feelingLucky: 'Szczesliwy traf',
+        feelingLucky: 'Szczęśliwy traf',
         infoProjects:
           '* Projekty są sortowane według ważności/złożoności projektu. Zatem w zasadzie na górze znajdują się moje najlepsze projekty, z których jestem dumny. Na dole listy znajdują się projekty, które nie są aż tak ważne i złożone.',
         infoSkills:
           '* Umiejętności są sortowane według poziomu wiedzy umiejętności. Zasadniczo na górze znajdują się umiejętności, których używam od dłuższego czasu, szczególnie w celach komercyjnych. Na dole znajdują się umiejętności, z którymi nie jestem zbyt zaznajomiony, ale nadal korzystam z nich w niektórych projektach (także komercyjnych).',
       },
       error: {
-        desc: 'Oh no... it looks your are lost.',
-        home: 'Take me home',
-        error: 'Error {code}',
+        desc: 'O nie... wygląda na to, że się zgubiłeś/zgubiłaś.',
+        home: 'Zabierz mnie do domu',
+        error: 'Błąd {code}',
       },
       homePage: 'Strona główna',
       aboutPage: 'O mnie',
       skillsPage: 'Umiejętności i Projekty',
       contactPage: 'Kontakt',
     },
+
   },
 }))
