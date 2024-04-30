@@ -1,16 +1,16 @@
 <template>
   <div class="text-gray-200">
     <p
-      class="text-center font-light sm:text-xl"
+      class="text-center md:text-left font-light sm:text-xl"
       v-if="headingData"
       v-html="useLocaleRenderer(headingData.heading_en, headingData.heading)"
     ></p>
-    <p class="text-center md:hidden">
+    <p class="text-center md:text-left md:hidden">
       {{ $t('contact.header.or') }}
     </p>
     <NuxtLink
       @click="scrollToBottom"
-      class="block animate-bounce text-center font-bold md:hidden"
+      class="block animate-bounce text-center md:text-left font-bold md:hidden"
     >
       {{ $t('contact.header.other') }}
       <Icon name="solar:alt-arrow-down-outline" />
