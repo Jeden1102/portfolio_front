@@ -7,7 +7,7 @@
         :to="prepareUrl(skill.skill_en)"
       >
         <AtomsBadge variant="big" custom-class="gap-1">
-          <span>{{ skill.skill }}</span>
+          <span>{{ useLocaleRenderer(skill.skill_en, skill.skill) }}</span>
           <Icon class="text-lg" :name="skill.skill_icon" />
         </AtomsBadge>
       </NuxtLink>

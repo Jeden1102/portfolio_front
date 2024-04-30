@@ -31,9 +31,9 @@
       {{ $t('skills.features') }}
     </p>
     <div v-for="feature in projectFeatures" class="flex items-center gap-2">
-      <Icon name="solar:check-square-bold-duotone" />
+      <Icon class="min-w-4" name="solar:check-square-bold-duotone" />
       <span>
-        {{ feature.project_feature }}
+        {{ useLocaleRenderer(feature.project_feature_en , feature.project_feature) }}
       </span>
     </div>
 
