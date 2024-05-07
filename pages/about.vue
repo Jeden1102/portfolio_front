@@ -1,9 +1,9 @@
 <template>
   <div
-    class="container-custom my-8 flex w-full flex-col items-center gap-8 text-gray-200 md:flex-row lg:gap-20"
+    class="container-custom my-8 flex w-full flex-col gap-8 text-gray-200 md:flex-row lg:gap-20"
   >
     <div
-      class="mb-6 flex flex-1 flex-col gap-2 rounded-md"
+      class="mb-6 mt-5 flex flex-1 flex-col gap-2 rounded-md"
       data-aos="fade-up"
       data-aos-delay="100"
     >
