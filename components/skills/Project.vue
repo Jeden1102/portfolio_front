@@ -33,7 +33,9 @@
     <div v-for="feature in projectFeatures" class="flex items-center gap-2">
       <Icon class="min-w-4" name="solar:check-square-bold-duotone" />
       <span>
-        {{ useLocaleRenderer(feature.project_feature_en , feature.project_feature) }}
+        {{
+          useLocaleRenderer(feature.project_feature_en, feature.project_feature)
+        }}
       </span>
     </div>
 
@@ -75,10 +77,6 @@
   }
 
   const config = useRuntimeConfig()
-
-  const getImgUri = (path: string) => {
-    return `${config.public.supabase.url}/storage/v1/object/public/skills/${path}`
-  }
 
   const props = defineProps<Props>()
 

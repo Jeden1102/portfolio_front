@@ -25,7 +25,7 @@
     <AtomsTextarea
       id="message"
       :placeholder="$t('contact.form.placeholders.message')"
-      :label = "$t('contact.form.labels.message')"
+      :label="$t('contact.form.labels.message')"
       :error-msg="v$.message.$errors[0]?.$message"
       v-model="formData.message"
       @on-value-change="v$.message.$touch"
@@ -60,8 +60,6 @@
   import { required, email, maxLength, helpers } from '@vuelidate/validators'
 
   type SubmissionStatus = null | 'success' | 'error'
-
-  const client = useSupabaseClient()
 
   const form = ref()
 
@@ -121,21 +119,5 @@
 
   const sendData = async () => {
     submission.value.isBeingSubmitted = true
-    const { data, error } = await client
-      .from('form_submissions')
-      .insert({ ...formData.value, seen: false })
-
-    submission.value.isBeingSubmitted = false
-
-    if (error) {
-      submission.value.submissionStatus = 'error'
-      submission.value.submissionMessage = t('contact.form.validations.error')
-      return
-    }
-
-    submission.value.isSubmitted = true
-    submission.value.submissionStatus = 'success'
-    submission.value.submissionMessage = t('contact.form.validations.success')
-    form.value.reset()
   }
 </script>

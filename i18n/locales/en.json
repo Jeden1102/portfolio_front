@@ -1,0 +1,65 @@
+{
+  "contact": {
+    "form": {
+      "labels": {
+        "email": "Your e-mail",
+        "subject": "Subject (optional)",
+        "message": "Message"
+      },
+      "placeholders": {
+        "subject": "Just a question",
+        "message": "Hi! I'd like to ask for..."
+      },
+      "send": "Send message",
+      "validations": {
+        "emailRequired": "The email field is required",
+        "invalidEmail": "Invalid email format",
+        "maxLength": "Max lenght is {length}",
+        "fieldRequired": "The {field} field is required",
+        "error": "There was an error while sending your form. Try again later.",
+        "success": "Your message has been send succesfully!"
+      }
+    },
+    "header": {
+      "or": "-OR-",
+      "other": "Show other contact options"
+    }
+  },
+  "home": {
+    "hero": {
+      "mainSkills": "Main Skills",
+      "more": "More about me",
+      "skills": "Skills",
+      "contact": "Contact"
+    }
+  },
+  "about": {
+    "softSkills": "Soft skills",
+    "myJourney": "My journey",
+    "title": "Let me introduce myself to make you know me better. On the timeline below there are the most important moments of my career."
+  },
+  "skills": {
+    "list": "Display in list",
+    "fancy": "Display in fancy style",
+    "live": "Live",
+    "code": "Code",
+    "empty": "Phrase { phrase } has not been found.",
+    "tips": "Tips:",
+    "useOneOfPhrase": "Use on of the phrase",
+    "features": "Project features",
+    "technologies": "Used technologies",
+    "googleSearch": "Search in Google",
+    "feelingLucky": "I'm feeling lucky",
+    "infoProjects": "* Projects are being sorted by the project importance/complexity. So basically, on the top there are my best projects I'm proud of. On the bottom of the list are the projects which are not that important and complex.",
+    "infoSkills": "* Skills are being sorted by the skills knowledge level. So basically, on the top there are skills I've been using for a long time aspecially as a commercial usage. On the bottom, there are skills I'm not that familiar with, but still used them in some projects (also commercial)."
+  },
+  "error": {
+    "desc": "O nie... wyglada na to, ze sie zgubiles.",
+    "home": "Do strony glownej",
+    "error": "Error {code}"
+  },
+  "homePage": "Home",
+  "aboutPage": "About me",
+  "skillsPage": "Skills&Projects",
+  "contactPage": "Contact"
+}

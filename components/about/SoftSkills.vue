@@ -10,17 +10,7 @@
 
   const softSkills = ref<SoftSkill[]>([])
 
-  const client = useSupabaseClient()
-
-  const getData = async () => {
-    const { data, error } = await client.from('soft_skills').select('*')
-
-    if (error) {
-      console.log(error)
-      return
-    }
-    softSkills.value = data
-  }
+  const getData = async () => {}
 
   onMounted(async () => {
     getData()

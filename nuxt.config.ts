@@ -1,18 +1,17 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: false },
+  devServer: {
+    port: 3001,
+  },
   css: ['~/assets/css/main.scss'],
   runtimeConfig: {
     public: {
-      SUPABASE_URL: '',
-      SUPABASE_KEY: '',
+      API_URL: '',
     },
   },
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
-  },
-  strapi: {
-    url: process.env.NUXT_PUBLIC_API_URL || 'http://localhost:1337',
   },
   modules: [
     [
@@ -28,22 +27,17 @@ export default defineNuxtConfig({
     '@nuxt/image',
     'nuxt-aos',
     '@nuxtjs/strapi',
-    '@nuxtjs/i18n',
-    '@nuxtjs/supabase',
     '@nuxtjs/apollo',
     '@pinia/nuxt',
     '@nuxt/image-edge',
+    '@nuxtjs/i18n',
   ],
-  supabase: {
-    redirect: false,
-  },
   i18n: {
-    vueI18n: './i18n.config.ts',
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: 'i18n_redirected',
-      redirectOn: 'root',
-    },
+    defaultLocale: 'en',
+    locales: [
+      { code: 'en', name: 'English', file: 'en.json' },
+      { code: 'pl', name: 'Polski', file: 'pl.json' },
+    ],
   },
   postcss: {
     plugins: {

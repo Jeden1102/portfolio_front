@@ -30,20 +30,7 @@
 
   const timeline = ref<Timeline[]>([])
 
-  const client = useSupabaseClient()
-
-  const getData = async () => {
-    const { data, error } = await client
-      .from('timeline')
-      .select('*')
-      .order('date', { ascending: false })
-
-    if (error) {
-      console.log(error)
-      return
-    }
-    timeline.value = data
-  }
+  const getData = async () => {}
 
   onMounted(async () => {
     getData()

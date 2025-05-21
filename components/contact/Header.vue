@@ -1,16 +1,16 @@
 <template>
   <div class="text-gray-200">
     <p
-      class="text-center md:text-left font-light sm:text-xl"
+      class="text-center font-light sm:text-xl md:text-left"
       v-if="headingData"
       v-html="useLocaleRenderer(headingData.heading_en, headingData.heading)"
     ></p>
-    <p class="text-center md:text-left md:hidden">
+    <p class="text-center md:hidden md:text-left">
       {{ $t('contact.header.or') }}
     </p>
     <NuxtLink
       @click="scrollToBottom"
-      class="block animate-bounce text-center md:text-left font-bold md:hidden"
+      class="block animate-bounce text-center font-bold md:hidden md:text-left"
     >
       {{ $t('contact.header.other') }}
       <Icon name="solar:alt-arrow-down-outline" />
@@ -32,24 +32,11 @@
 
   const headingData = ref<ContactHero | null>(null)
 
-  const client = useSupabaseClient()
-
   const scrollToBottom = () => {
     window.scrollTo(0, document.body.scrollHeight)
   }
 
-  const getData = async () => {
-    const { data, error } = await client
-      .from('contact_page')
-      .select('*')
-      .single()
-
-    if (error) {
-      console.log(error)
-      return
-    }
-    headingData.value = data
-  }
+  const getData = async () => {}
 
   onMounted(async () => {
     getData()

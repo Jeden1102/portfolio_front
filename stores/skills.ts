@@ -21,38 +21,8 @@ export const useSkillsStore = defineStore('skills', {
     },
   },
   actions: {
-    async fetchDbValues(table: string, key: string) {
-      const client = useSupabaseClient()
-      const { data, error } = await client.from(table).select('*')
+    async fetchDbValues(table: string, key: string) {},
 
-      if (error) {
-        console.log(error)
-        this[key] = []
-        return false
-      }
-
-      this[key] = data
-
-      return true
-    },
-
-    async fetchSkillsByGroup(group: string) {
-      const client = useSupabaseClient()
-      const { data, error } = await client
-        .from('skill')
-        .select('*')
-        .order('rating', { ascending: true })
-        .eq('skills_group', group)
-
-      if (error) {
-        console.log(error)
-        this.skills = []
-        return false
-      }
-
-      this.skills = data
-
-      return true
-    },
+    async fetchSkillsByGroup(group: string) {},
   },
 })

@@ -29,20 +29,7 @@
     title: 'Contact',
   })
 
-  const client = useSupabaseClient()
-
-  const getData = async () => {
-    const { data, error } = await client
-      .from('contact_links')
-      .select('*')
-      .single()
-
-    if (error) {
-      console.log(error)
-      return
-    }
-    contactData.value = data
-  }
+  const getData = async () => {}
 
   onMounted(async () => {
     getData()

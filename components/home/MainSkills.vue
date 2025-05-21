@@ -8,20 +8,7 @@
 
   const mainSkills = ref<Skill[]>([])
 
-  const client = useSupabaseClient()
-
-  const getData = async () => {
-    const { data, error } = await client
-      .from('skill')
-      .select('name')
-      .eq('is_main', 1)
-
-    if (error) {
-      console.log(error)
-      return
-    }
-    mainSkills.value = data
-  }
+  const getData = async () => {}
 
   onMounted(async () => {
     getData()

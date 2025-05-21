@@ -80,17 +80,7 @@
 
   const headingData = ref<HomeHero | null>(null)
 
-  const client = useSupabaseClient()
-
-  const getData = async () => {
-    const { data, error } = await client.from('main_page').select('*').single()
-
-    if (error) {
-      console.log(error)
-      return
-    }
-    headingData.value = data
-  }
+  const getData = async () => {}
 
   onMounted(async () => {
     getData()
